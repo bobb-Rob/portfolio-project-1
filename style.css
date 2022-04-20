@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Poppins&family=Roboto:ital,wght@0,400;0,500;0,900;1,100&display=swap');
 
 *{
     margin: 0px;
@@ -8,15 +9,16 @@
 :root{
     --lightdark: #3C3A39;
     --white: #FFFFFF;
+    --deepDark: #1C1A19;
 }
 
 #header{
     background: var(--lightdark);
-    min-width: 375px;
+   
     height: 48px;
     display: flex;
     justify-content: space-between; 
-    padding: 12px;     
+    padding: 12px 24px 12px 24px;     
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -33,10 +35,61 @@
 }
 
 .header-btn{
-    background-color: var(--lightdark);
+    background: none;
     outline: none;
     border: none;
 }
+
+#headline-section{  
+    background-color: #1C1A19;
+    padding: 100px 24px 24px 24px;   
+    height: 590px;
+    background-image: url(./illustrations/Illustrationillustration.svg);
+    background-repeat: no-repeat;
+   background-position: 230px 230px;
+}
+
+
+#headline-section .headline-primary-text{
+    font-family: 'Crete Round';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 64px;
+    letter-spacing: 0.37px;
+    color: #FF6B00;
+}
+
+#headline-section h4{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFF5E1;
+}
+
+#headline-section p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-top: 12px;
+}
+
+.headline-social-media{
+    margin-top: 12px;
+}
+
+.headline-social-media button{
+    background: none;
+    outline: none;
+    border: none;
+}
+
+
 
 /* 
 @media screen and (max-width: 375px){
