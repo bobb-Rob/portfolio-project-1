@@ -23,24 +23,26 @@ To get a local copy up and running follow these simple example steps.
 ### Setup
 
 > To clone this repository, please follow the steps below:
-> **Clone Git Repository In GitHub**
+#### **Clone Git Repository In GitHub**
 
-1 In the File menu, click Clone Repository.
-2 Click the tab that corresponds to the location of the repository you want to clone. ...
-3 Choose the repository you want to clone from the list.
-4 Click Choose... and navigate to a local path where you want to clone the repository.
-5 Click Clone.
+- In the File menu, click Clone Repository.
+- Click the tab that corresponds to the location of the repository you want to clone. ...
+- Choose the repository you want to clone from the list.
+- Click Choose... and navigate to a local path where you want to clone the repository.
+- Click Clone.
 
 or
 
-**Clone Git Repository In Visual Studio Code**
-1 Open VSCode and select a folder where to download the Git project to (Ctrl + K wait a second
-Ctrl + O):
-Top Menu -> Files -> Open Folder...
-2 Start the terminal (Ctrl + `):
-Top Menu -> View-> Terminal
-3 Execute the git clone command in the terminal:
-PS C:\> git clone https://github.com/path/to/repo.git
+#### **Clone Git Repository In Visual Studio Code**
+
+- Open VSCode and select a folder where to download the Git project to (Ctrl + K wait a second Ctrl + O):
+  > Top Menu -> Files -> Open Folder...
+
+- Start the terminal (Ctrl + `):
+  > Top Menu -> View-> Terminal
+
+- Execute the git clone command in the terminal:
+  > PS C:\> git clone https://github.com/path/to/repo.git
 
 ### Install
 
