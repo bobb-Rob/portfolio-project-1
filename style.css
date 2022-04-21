@@ -30,6 +30,10 @@
   line-height: 24px;
 }
 
+#header a {
+  text-decoration: none;
+}
+
 #logo {
   font-style: normal;
   font-weight: 700;
@@ -42,6 +46,10 @@
   background: none;
   outline: none;
   border: none;
+}
+
+.header-btn:hover {
+  cursor: pointer;
 }
 
 #headline-section {
@@ -96,4 +104,5 @@
 
 .headline-social-media li:hover {
   cursor: pointer;
+  background-color: #3c3a39;
 }
