@@ -8,9 +8,45 @@
 - CSS
 - ES6lint
 
-## Using this Repository
+## Getting Started
 
-> Make us of the classic git clone concept to begin with. Ensure that you open the package.json file to see the dependencies that you install.
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+> You will need the following on you machine to reproduce this project
+
+- Code editor preferebly Visual Studio Code (VScode).
+- Basic understanding of HTML and CSS languages
+- Basic usage of HTML and CSS linters
+
+### Setup
+
+> To clone this repository, please follow the steps below:
+> **Clone Git Repository In GitHub**
+
+1 In the File menu, click Clone Repository.
+2 Click the tab that corresponds to the location of the repository you want to clone. ...
+3 Choose the repository you want to clone from the list.
+4 Click Choose... and navigate to a local path where you want to clone the repository.
+5 Click Clone.
+
+or
+
+**Clone Git Repository In Visual Studio Code**
+1 Open VSCode and select a folder where to download the Git project to (Ctrl + K wait a second
+Ctrl + O):
+Top Menu -> Files -> Open Folder...
+2 Start the terminal (Ctrl + `):
+Top Menu -> View-> Terminal
+3 Execute the git clone command in the terminal:
+PS C:\> git clone https://github.com/path/to/repo.git
+
+### Install
+
+- install VScode if you do not already have it.
+- install stylelint. Follow the Docs [here](https://stylelint.io/user-guide/get-started)
+- install webHint. Follow the Docs [here](https://webhint.io/docs/user-guide/#install-webhint)
 
 ## Author
 
@@ -19,3 +55,21 @@
 - GitHub: [@bobb-rob](https://github.com/bobb-Rob)
 - Twitter: [@\_\_Robertson](https://twitter.com/___Robertson)
 - LinkedIn: https://www.linkedin.com/in/robertson-arthur-6895a0123/
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Special thanks to the Microverse team for the excellent Design template provided as guide.
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
