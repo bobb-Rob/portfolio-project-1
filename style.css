@@ -11,7 +11,7 @@
   --white: #fff;
   --deepDark: #1c1a19;
   --blue-like: #091e42;
-  --orange: #ff6b00;;
+  --orange: #ff6b00;
 }
 
 #main-content {
@@ -85,7 +85,7 @@
   color: #fff5e1;
 }
 
-#headline-section p {
+.headline-desc {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -109,69 +109,37 @@
   background-color: #3c3a39;
 }
 
-#recent-works {
-  display: flex;
-  flex-direction: column;  
-  justify-items: center;
-  padding: 120px 0;
-}
-
-#recent-works-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px;
-}
-
-#recent-works-header > h1 {
-  font-family: 'Crete Round';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 52px;   
-  color: var(--deepDark);  
-  height: 83px;
-}
-
 .thin-line {
   border: 1px solid #212121;
-  height: 0px; 
+  height: 0;
   width: 327px;
   margin: 0 0 80px 0;
-}
-
-#recent-works-header + div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px;
 }
 
 .featured {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px 24px;
-  border: 2px solid red;
+  padding: 0 24px;
 }
 
-.img-placeholder { 
-  width: 327px; 
+.img-placeholder {
+  width: 327px;
   height: 237px;
   background: url(./images/Placeholder-feature-img.png);
   background-repeat: no-repeat;
-  margin: 12px 0px;
+  margin: 12px 0;
 }
 
 .img-placeholder + div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
+  padding: 0;
 }
 
 .img-placeholder + div > h3 {
-  font-family: 'Crete Round';
+  font-family: 'Crete Round', serif;
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
@@ -179,31 +147,31 @@
   display: flex;
   align-items: center;
   color: var(--blue-like);
-  margin: 12px 0px;
+  margin: 12px 0;
 }
 
 .img-placeholder + div > p {
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: var(--blue-like);
-  margin: 12px 0px;
+  margin: 12px 0;
 }
 
 .img-placeholder + div > div {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px;
+  padding: 0;
   width: 297px;
-  height: 40px; 
+  height: 40px;
 }
 
 .tags {
   background: #fff;
-  border: 1px solid #8993A4;
+  border: 1px solid #8993a4;
   box-sizing: border-box;
   height: 40px;
   display: flex;
@@ -216,10 +184,118 @@
 .btn {
   padding: 12px;
   background: var(--orange);
-  width: 124px;
   height: 48px;
-  margin: 12px 0px;
   outline: none;
   border: none;
   border-radius: 1px;
+}
+
+.btn-feature {
+  width: 124px;
+  margin: 12px 0 0 0;
+}
+
+#card-container {
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: [col1-start] 1fr;
+}
+
+.project-card {
+  margin: 24px 0 0 0;
+  position: relative;
+  list-style: none;
+  background: url(./images/card-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 16px;
+  margin: 70px 0 14px 0;
+}
+
+.card-description > h1 {
+  font-family: 'Crete Round', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+  color: #fff;
+  height: 81px;
+}
+
+div.card-description > p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  margin: 12px 0;
+}
+
+div.description-tags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  height: 40px;
+}
+
+div.card-description > div > span {
+  padding: 10px 12px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.24);
+  margin: 0 12px 0 0;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #fff;
+}
+
+.btn-card {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: #fff;
+}
+
+#recent-works {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding: 120px 0;
+}
+
+#recent-works-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+#recent-works-header > h1 {
+  font-family: 'Crete Round', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  color: var(--deepDark);
+  height: 83px;
+}
+
+#recent-works-header + div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
 }
