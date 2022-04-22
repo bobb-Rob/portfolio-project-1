@@ -370,4 +370,44 @@ div.card-description > div > span {
   flex-direction: column;
   align-items: center;
   padding: 0px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.skill-list-item {
+  margin: 16px 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 43px;
+  text-align: center;
+  list-style: none;
+}
+
+.skill-list-wrap { 
+  margin: 12px 0;
+}
+
+.language,.framework,.skills {
+  position: relative;
+}
+
+.language::before {
+  content: url(./illustrations/Rectangle55.png);
+  position: absolute;
+  left: -40px;
+}
+
+.framework::before {
+  content: url(./illustrations/Rectangle56.png);
+  position: absolute;
+  left: -30px;
+}
+
+.skills::before {
+  content: url(./illustrations/Rectangle57.png);
+  position: absolute;
+  left: -30px;
 }
