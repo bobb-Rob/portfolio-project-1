@@ -299,3 +299,75 @@ div.card-description > div > span {
   align-items: center;
   padding: 0;
 }
+
+#about-and-skill-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1901px;
+  background: var(--deepDark);
+  background-image: url(./illustrations/Frame.png);
+  background-repeat: no-repeat;
+  background-position: 100% 23%;
+}
+
+#about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 120px 24px;
+  height: 563px;
+}
+
+#about-me-title {
+  font-family: 'Crete Round', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 88px;
+  letter-spacing: 0.37px;
+  color: var(--orange);
+}
+
+.about-description {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #f4f5f7;
+  margin: 24px 0;
+}
+
+.btn-about-me {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.about-section-divider {
+  width: 327px;
+  height: 0;
+  border: 1px solid #fff;
+  margin: 80px 0 0 0;
+}
+
+#skill-section {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 24px;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+.skill-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+}
