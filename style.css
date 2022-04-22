@@ -116,10 +116,16 @@
   margin: 0 0 80px 0;
 }
 
+#my-works {
+  width: 100%;
+}
+
 .featured {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  align-items: center;
+  width: 100%;
   padding: 0 24px;
 }
 
@@ -131,10 +137,10 @@
   margin: 12px 0;
 }
 
-.img-placeholder + div {
+.multi-post {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   padding: 0;
 }
 
@@ -193,6 +199,13 @@
 .btn-feature {
   width: 124px;
   margin: 12px 0 0 0;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  align-self: flex-start;
+  color: #fff;
 }
 
 #card-container {
@@ -315,8 +328,16 @@ div.card-description > div > span {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-items: center;
   padding: 120px 24px;
   height: 563px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 #about-me-title {
@@ -326,7 +347,7 @@ div.card-description > div > span {
   font-size: 72px;
   line-height: 88px;
   letter-spacing: 0.37px;
-  color: var(--orange);
+  color: var(--orange);  
 }
 
 .about-description {
@@ -369,7 +390,7 @@ div.card-description > div > span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px;
+  padding: 0;
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -386,11 +407,18 @@ div.card-description > div > span {
   list-style: none;
 }
 
-.skill-list-wrap { 
+.skill-list-item:hover {
+  cursor: pointer;
+  color: var(--orange);
+}
+
+.skill-list-wrap {
   margin: 12px 0;
 }
 
-.language,.framework,.skills {
+.language,
+.framework,
+.skills {
   position: relative;
 }
 
@@ -410,4 +438,87 @@ div.card-description > div > span {
   content: url(./illustrations/Rectangle57.png);
   position: absolute;
   left: -30px;
+}
+
+#contact-form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 24px;
+}
+
+.contact-form-header {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;  
+  text-align: center;
+  color: #172b4d;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 58px 0 0 0;
+  min-width: 327px;
+}
+
+.text-input {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #979493;
+  height: 48px;
+  padding: 12px;
+  border: none;
+  border-bottom: none;
+}
+
+#contact-text-area {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  width: 100%;
+  height: 114px;
+  padding: 12px;
+  border: none;
+}
+
+.btn-form-submit {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  margin: 24px 0;
+  color: #fff;
+}
+
+#bottom-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-social-media {
+  display: flex;
+  list-style: none;
+  height: 40px;
+  filter: invert(37%) sepia(12%) saturate(1086%) hue-rotate(179deg) brightness(92%) contrast(88%);
+}
+
+.social-media {
+  width: 40px;
+  height: 40px;
+}
+
+.social-media:hover {
+  background: var(--lightdark);
 }
