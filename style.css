@@ -199,7 +199,7 @@
 .btn-feature {
   width: 124px;
   margin: 12px 0 0 0;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
@@ -347,7 +347,7 @@ div.card-description > div > span {
   font-size: 72px;
   line-height: 88px;
   letter-spacing: 0.37px;
-  color: var(--orange);  
+  color: var(--orange);
 }
 
 .about-description {
@@ -452,7 +452,7 @@ div.card-description > div > span {
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
-  line-height: 44px;  
+  line-height: 44px;
   text-align: center;
   color: #172b4d;
 }
