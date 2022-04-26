@@ -12,7 +12,6 @@
   --deepDark: #1c1a19;
   --blue-like: #091e42;
   --orange: #ff6b00;
-  --orange2: #231308;
 }
 
 #main-content {
@@ -186,7 +185,7 @@
 
 .btn {
   padding: 12px;
-  background: var(--orange2);
+  background: var(--orange);
   height: 48px;
   outline: none;
   border: none;
