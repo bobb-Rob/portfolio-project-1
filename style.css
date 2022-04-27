@@ -12,6 +12,7 @@
   --deepDark: #1c1a19;
   --blue-like: #091e42;
   --orange: #ff6b00;
+  --btn-disabledBGcolor: #f4f1f0;
 }
 
 #main-content {
@@ -204,6 +205,18 @@
   color: #fff;
 }
 
+.btn-feature:hover {
+  border: 1px solid var(--orange);
+  color: var(--orange);
+  background-color: #fff5e1;
+}
+
+.btn-feature:disabled {
+  border: none;
+  color: #5b5957;
+  background-color: var(--btn-disabledBGcolor);
+}
+
 #card-container {
   padding: 0 16px;
   display: grid;
@@ -371,6 +384,18 @@
   color: #fff;
 }
 
+.btn-about-me:hover {
+  border: 1px solid var(--orange);
+  color: var(--orange);
+  background-color: #fff5e1;
+}
+
+.btn-about-me:disabled {
+  border: none;
+  color: #5b5957;
+  background-color: #f4f1f0;
+}
+
 .about-section-divider {
   width: 327px;
   height: 0;
@@ -505,9 +530,15 @@
 }
 
 .btn-form-submit:hover {
-  border-color: #f55800;
-  color: #f55800;
+  border: 1px solid var(--orange);
+  color: var(--orange);
   background-color: #fff5e1;
+}
+
+.btn-form-submit:disabled {
+  border: none;
+  color: #5b5957;
+  background-color: var(--btn-disabledBGcolor);
 }
 
 #bottom-nav {
@@ -519,7 +550,8 @@
   display: flex;
   list-style: none;
   height: 40px;
-  filter: invert(37%) sepia(12%) saturate(1086%) hue-rotate(179deg)
+  filter:
+    invert(37%) sepia(12%) saturate(1086%) hue-rotate(179deg)
     brightness(92%) contrast(88%);
 }
 
