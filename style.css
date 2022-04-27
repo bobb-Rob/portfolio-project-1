@@ -336,7 +336,7 @@
   background: var(--deepDark);
   background-image: url(./illustrations/Frame.png);
   background-repeat: no-repeat;
-  background-position: 100% 23%;
+  background-position: 100% 20%;
 }
 
 #about-section {
@@ -543,7 +543,19 @@
 
 #bottom-nav {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  border-top: 1px solid #dfe1e6;
+  padding-top: 10px;
+}
+
+.bottom-line {
+  background-color: #0d151e;
+  height: 5px;
+  width: 134px;
+  border-radius: 10px;
+  margin: 15px 0 8px 0;
 }
 
 .contact-social-media {
