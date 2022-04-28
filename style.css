@@ -59,12 +59,13 @@
   background-color: var(--deepDark);
   padding: 100px 24px 24px 24px;
   height: 590px;
-  background-image: url(./illustrations/Illustrationillustration.svg);
-  background-repeat: no-repeat;
-  background-position: 100% 230px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.headline-text-wrapper {
+  max-width: 566px;
 }
 
 #headline-section .headline-primary-text {
@@ -77,7 +78,7 @@
   color: var(--orange);
 }
 
-#headline-section > h4 {
+#headline-section h4 {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -582,7 +583,24 @@
   display: none;
 }
 
+@media screen and (max-width: 768px) {
+  #headline-section {
+    background-image: url(./illustrations/Illustrationillustration.svg);
+    background-repeat: no-repeat;
+    background-position: 100% 230px;
+  }
+}
+
 @media screen and (min-width: 768px) {
+  #logo {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 123px;
+  }
+
   .hamburger-btn {
     display: none;
   }
@@ -590,6 +608,12 @@
   #desktop-nav-links {
     display: flex;
     list-style: none;
+    margin-right: 151px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
   }
 
   #desktop-nav-links > li {
@@ -608,7 +632,44 @@
     margin: auto;
   }
 
-  #desktop-nav-links:last-child {
-    background: var(--orange);
+  #headline-section {
+    height: 798px;
+    padding: 192px 24px 24px 24px;
+    background-image: url(./illustrations/Illustration-headerdesktop.png);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    position: relative;
+  }
+
+  .headline-text-wrapper {
+    margin-left: 123px;
+  }
+
+  #headline-section .headline-primary-text {    
+    font-size: 72px;
+    line-height: 82px;      
+  }
+
+  #headline-section h4 {
+    font-family: "inter", sans-serif;    
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 44px;
+    
+  }
+  
+  .headline-desc {
+    font-family: "inter", sans-serif;    
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #fff;
+    margin-top: 12px;
+  }
+
+  .headline-social-media {
+    position: absolute;
+    padding: 50px 0;
+    display: block;
   }
 }
