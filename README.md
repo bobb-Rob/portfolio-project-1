@@ -52,11 +52,17 @@ or
 
 ## Author
 
-### Robertsn Akpan
+### Robertson Akpan
 
 - GitHub: [@bobb-rob](https://github.com/bobb-Rob)
 - Twitter: [@\_\_Robertson](https://twitter.com/___Robertson)
 - LinkedIn: https://www.linkedin.com/in/robertson-arthur-6895a0123/
+
+### Tahseen Zahrah
+GitHub: [@tahseenzahra](https://github.com/tahseenzahra)
+
+### Muhammad Shaheer
+GitHub: [@shaheerCH](https://github.com/shaheerCH)
 
 ## 🤝 Contributing
 
