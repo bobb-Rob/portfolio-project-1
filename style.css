@@ -43,6 +43,13 @@
   font-size: 18px;
   line-height: 24px;
   color: var(--white);
+  transition-property: color;
+  transition-duration: 1s;
+  transition-delay: 1008ms;
+}
+
+#logo:hover {
+  color: #ff6b00;
 }
 
 .icon-btn {
@@ -107,7 +114,7 @@
 }
 
 .featured {
-  display: flex;  
+  display: flex;
   /* width: 100%;  */
 }
 
@@ -168,6 +175,7 @@
   outline: none;
   border: none;
   border-radius: 1px;
+  transition: border 2s, color 2s, background-color 1s;
 }
 
 .btn-feature {
@@ -272,11 +280,11 @@
   background: var(--deepDark);
 }
 
-#about-section {   
-  padding: 120px 24px; 
+#about-section {
+  padding: 120px 24px;
 }
 
-.about-me-header {  
+.about-me-header {
   width: 100%;
 }
 
@@ -487,8 +495,7 @@
   display: flex;
   list-style: none;
   height: 40px;
-  filter:
-    invert(37%) sepia(12%) saturate(1086%) hue-rotate(179deg)
+  filter: invert(37%) sepia(12%) saturate(1086%) hue-rotate(179deg)
     brightness(92%) contrast(88%);
 }
 
@@ -520,14 +527,14 @@
     background-repeat: no-repeat;
     background-position: 100% 230px;
   }
-  
+
   .recent-works-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0;
   }
-  
+
   .recent-works-header > h2 {
     font-family: "Crete Round", serif;
     font-style: normal;
@@ -537,7 +544,7 @@
     color: var(--deepDark);
     height: 83px;
   }
-  
+
   .my-works {
     display: flex;
     flex-direction: column;
@@ -556,7 +563,7 @@
   .featured {
     flex-direction: column;
     align-items: center;
-    padding: 0 24px;   
+    padding: 0 24px;
   }
 
   .first-card-image {
@@ -567,11 +574,11 @@
     margin: 12px 0;
   }
 
-  .first-card {    
+  .first-card {
     align-items: center;
     padding: 0;
   }
-  
+
   .first-card > h3 {
     font-family: "Crete Round", serif;
     font-style: normal;
@@ -583,7 +590,7 @@
     color: var(--blue-like);
     margin: 12px 0;
   }
-  
+
   #card-container {
     padding: 0 16px;
     display: grid;
@@ -600,7 +607,8 @@
     background-position: 100% 20%;
   }
 
-  #about-section { /* Mobile Section */
+  #about-section {
+    /* Mobile Section */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -608,14 +616,14 @@
     padding: 120px 24px;
     height: 563px;
   }
-  
+
   .about-me-header {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
   }
-  
+
   .about-me-header h3 {
     font-family: "Crete Round", serif;
     font-style: normal;
@@ -625,7 +633,7 @@
     letter-spacing: 0.37px;
     color: var(--orange);
   }
-  
+
   .about-description {
     font-family: "Inter", sans-serif;
     font-style: normal;
@@ -648,12 +656,19 @@
 
 @media screen and (min-width: 768px) {
   #logo {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 20px;
     margin-left: 123px;
+    transition-property: color;
+    transition-delay: 1008ms;
+    transition-duration: 1s;
+  }
+
+  #logo:hover {
+    color: #ff6b00;
   }
 
   .hamburger-btn {
@@ -664,7 +679,7 @@
     display: flex;
     list-style: none;
     margin-right: 151px;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
@@ -676,12 +691,14 @@
     position: relative;
   }
 
-  #desktop-nav-links > li > a {/* nav links */
+  #desktop-nav-links > li > a {
+    /* nav links */
     text-decoration: none;
     color: var(--white);
   }
 
-  #desktop-nav-links > li > button {/* nav icon btn */
+  #desktop-nav-links > li > button {
+    /* nav icon btn */
     position: absolute;
     inset: 0;
     margin: auto;
@@ -749,7 +766,7 @@
     width: 100%;
     margin: 0 24px 0 0;
   }
-  
+
   .recent-works-header > h2 {
     font-family: "Crete Round", serif;
     font-style: normal;
@@ -758,16 +775,16 @@
     line-height: 52px;
     color: var(--deepDark);
     width: 415px;
-    margin: 0 0 0 24px;   
+    margin: 0 0 0 24px;
   }
-  
+
   .my-works {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0;
   }
-/* 
+  /* 
   .featured {
     display: grid;   
     grid-template-columns: 2fr 1frsssss;
@@ -787,7 +804,7 @@
     padding-left: 24px;
     grid-column: span 2;
   }
-  
+
   .first-card > h3 {
     font-weight: 400;
     font-size: 40px;
@@ -795,7 +812,7 @@
     color: var(--blue-like);
     margin: 12px 0;
   }
-  
+
   #card-container {
     margin-top: 24px;
     display: grid;
@@ -804,7 +821,7 @@
     row-gap: 24px;
   }
 
-  #about-and-skill-section {    
+  #about-and-skill-section {
     /* align-items: center;     */
     /* background: var(--deepDark); */
     /* height: 1195px; */
@@ -814,12 +831,12 @@
     padding: 0 142px 0 142px;
   }
 
-  #about-section {   
+  #about-section {
     align-items: flex-start;
     justify-items: center;
     padding: 130px 24px;
     height: 563px;
-    max-width: 566px;  
+    max-width: 566px;
   }
 
   .about-section-divider {
@@ -840,7 +857,7 @@
     padding: 130px 135px;
   }
 
-  .contact-form-header {   
+  .contact-form-header {
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -868,7 +885,8 @@
     display: none;
   }
 
-  .email-input,.text-area {
+  .email-input,
+  .text-area {
     grid-column: 1 / 3;
   }
 
