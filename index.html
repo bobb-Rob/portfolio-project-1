@@ -232,8 +232,7 @@
         </div>  
        
         <footer>
-            <section id="contact-form-section" class="form-section h2">
-                <h2></h2>
+            <section id="contact-form-section" >                
                 <div>
                     <h2 class='contact-form-header' >I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h2>
                 </div>
@@ -241,7 +240,7 @@
                      method="POST" 
                 >
                    <input 
-                        class="text-input" 
+                        class="text-input contact-input-mobile" 
                         type="text"  
                         id="visitors-name"                       
                         placeholder="Full name"
@@ -249,7 +248,24 @@
                         required
                     >
                    <input 
-                        class="text-input" 
+                        class="text-input contact-input-desktop first-name" 
+                        type="text"  
+                        id="first-name"                       
+                        placeholder="First Name"
+                        maxlength="30"
+                        required
+                    >
+                   <input 
+                        class="text-input contact-input-desktop" 
+                        type="text"  
+                        id="last-name"                       
+                        placeholder="Last Name"
+                        maxlength="30"
+                        required
+                    >
+                   
+                    <input 
+                        class="text-input email-input" 
                         type="email" 
                         name="email" 
                         id="visiotors-email"
@@ -257,6 +273,7 @@
                         required
                     >
                     <textarea 
+                        class="text-area"
                         name="contact-text" 
                         id="contact-text-area" 
                         cols="30" rows="10" 
