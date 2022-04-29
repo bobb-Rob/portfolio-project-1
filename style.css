@@ -115,8 +115,6 @@
 
 .featured {
   display: flex;
-
-  /* width: 100%;  */
 }
 
 .first-card {
@@ -210,6 +208,7 @@
   background: url(./images/card-image.png);
   background-repeat: no-repeat;
   background-size: cover;
+  max-width: 369px;
 }
 
 .card-description {
@@ -568,12 +567,14 @@
     padding: 0 24px;
   }
 
-  .first-card-image {
+  .first-card-image-container {
     width: 327px;
     height: 237px;
-    background: url(./images/Placeholder-feature-img.png);
-    background-repeat: no-repeat;
     margin: 12px 0;
+  }
+
+  .first-card-img-desktop {
+    display: none;
   }
 
   .first-card {
@@ -788,25 +789,23 @@
     padding: 0;
   }
 
-  /*
   .featured {
     display: grid;
-    grid-template-columns: 2fr 1frsssss;
-    border: 2px solid rgb(140, 0, 255);
-  } */
+    grid-template-columns: 2fr 1fr;
+    justify-items: start;
+  }
 
-  .first-card-image {
+  .first-card-image-container {
     max-width: 684px;
     height: 448px;
-    background: url(./images/Desktop-FirstCard.svg);
-    background-repeat: no-repeat;
-    flex: 1 0 100%;
-    border: 2px solid red;
+  }
+
+  .first-card-img-mobile {
+    display: none;
   }
 
   .first-card {
     padding-left: 24px;
-    grid-column: span 2;
   }
 
   .first-card > h3 {
@@ -820,9 +819,10 @@
   #card-container {
     margin-top: 24px;
     display: grid;
-    grid-template-columns: [col1-start] 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(309px, 1fr));
     column-gap: 24px;
     row-gap: 24px;
+    width: 100%;
   }
 
   #about-and-skill-section {
