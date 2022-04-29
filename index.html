@@ -11,7 +11,25 @@
     <header id="header" >
         <a href="#"><span id="logo" >Robertson Arthur</span></a> 
         <nav>
-            <button type="button" class="header-btn">
+            <!-- Desktop nav links -->
+            <ul id="desktop-nav-links" >
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+                <li>
+                    <button type="button" class="icon-btn"> 
+                        <img src="./icons/UnionMail-icon.png" alt="mail icon" > 
+                    </button>
+                </li>
+            </ul>
+            <!-- Destop nav ends here -->
+            <button type="button" class="hamburger-btn icon-btn">
                 <img src="./icons/Icon-Menumenu-icon.png" alt="Menu-icon">
             </button>
         </nav>
@@ -19,11 +37,13 @@
 
     <main id="main-content" >
         <section id="headline-section" >
-            <h1 class="headline-primary-text" >Hey There. I’m Robertson</h1>
-            <h4>I’am a Software Developer</h4>
-            <p class="headline-desc" >I can help you build a product , feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, 
-                don’t hestiate to contact me.
-            </p>
+            <div class="headline-text-wrapper">
+                <h1 class="headline-primary-text" >Hey There. <br> I’m Robertson</h1>
+                <h4>I’am a Software Developer</h4>
+                <p class="headline-desc" >I can help you build a product , feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, 
+                    don’t hestiate to contact me.
+                </p>
+            </div>            
 
             <ul class="headline-social-media" >
                 <li>
@@ -55,16 +75,23 @@
         </section>
 
         <section id="recent-works" >
-            <div id="recent-works-header" >
+            <div class="recent-works-header" >
                 <h2>My Recent Works</h2>
                 <div class="thin-line" ></div>
             </div>           
             
-            <div id="my-works">
-                <div class="featured" >
-                   
-                    <div class="img-placeholder" ></div>                    
-                    <div class="multi-post">
+            <div class="my-works">
+                <div class="featured" >                   
+                    <div class="first-card-image-container" >
+                        <img class="first-card-img-mobile" src="./images/Placeholder-feature-img.png" alt="project image">
+                        <img 
+                            class="first-card-img-desktop" 
+                            src="./images/Desktop-FirstCard.svg" 
+                            alt="project image"
+                            
+                            >
+                    </div>                    
+                    <div class="first-card">
                         <h3>Multi-Post Stories</h3>
                         <p>A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text 
                             ever since the 1500s, when an unknown printer took a standard dummy text.
@@ -149,15 +176,29 @@
                             </ul>
                         </div>
                         <button class="btn btn-card" type="button" >See Project</button>   
-                    </li>            
+                    </li>
+                    <li class="project-card" >                       
+                        <div class="card-description" >
+                            <h3>Profesional Art Printing Data</h3>
+                            <p>A daily selection of privately personalized reads; no accounts or sign-ups required. 
+                                has been the industry's standard
+                            </p>
+                            <ul class="description-tags">
+                                <li>html</li>
+                                <li>Bootstrap</li>
+                                <li>Ruby</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-card" type="button" >See Project</button>   
+                    </li>              
 
                 </ul>               
             </div>
         </section>
         <div id="about-and-skill-section" >
             <section id="about-section">
-                <div class="header" >
-                    <h3 id="about-me-title">About me</h3>
+                <div class="about-me-header" >
+                    <h3>About me</h3>
                 </div>
                 <p class="about-description" >Hello I’m a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hestiate to contact me.</p>
                 <button type="button" class="btn btn-about-me">Get My Resume</button>
@@ -199,7 +240,7 @@
         </div>  
        
         <footer>
-            <section id="contact-form-section">
+            <section id="contact-form-section" >                
                 <div>
                     <h2 class='contact-form-header' >I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h2>
                 </div>
@@ -207,7 +248,7 @@
                      method="POST" 
                 >
                    <input 
-                        class="text-input" 
+                        class="text-input contact-input-mobile" 
                         type="text"  
                         id="visitors-name"                       
                         placeholder="Full name"
@@ -215,7 +256,24 @@
                         required
                     >
                    <input 
-                        class="text-input" 
+                        class="text-input contact-input-desktop first-name" 
+                        type="text"  
+                        id="first-name"                       
+                        placeholder="First Name"
+                        maxlength="30"
+                        required
+                    >
+                   <input 
+                        class="text-input contact-input-desktop" 
+                        type="text"  
+                        id="last-name"                       
+                        placeholder="Last Name"
+                        maxlength="30"
+                        required
+                    >
+                   
+                    <input 
+                        class="text-input email-input" 
                         type="email" 
                         name="email" 
                         id="visiotors-email"
@@ -223,6 +281,7 @@
                         required
                     >
                     <textarea 
+                        class="text-area"
                         name="contact-text" 
                         id="contact-text-area" 
                         cols="30" rows="10" 
