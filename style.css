@@ -43,6 +43,13 @@
   font-size: 18px;
   line-height: 24px;
   color: var(--white);
+  transition-property: color;
+  transition-duration: 1s;
+  transition-delay: 1008ms;
+}
+
+#logo:hover {
+  color: #ff6b00;
 }
 
 .icon-btn {
@@ -654,6 +661,13 @@
     font-size: 20px;
     line-height: 20px;
     margin-left: 123px;
+    transition-property: color;
+    transition-delay: 1008ms;
+    transition-duration: 1s;
+  }
+
+  #logo:hover {
+    color: #ff6b00;
   }
 
   .hamburger-btn {
