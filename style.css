@@ -115,6 +115,7 @@
 
 .featured {
   display: flex;
+
   /* width: 100%;  */
 }
 
@@ -495,7 +496,8 @@
   display: flex;
   list-style: none;
   height: 40px;
-  filter: invert(37%) sepia(12%) saturate(1086%) hue-rotate(179deg)
+  filter:
+    invert(37%) sepia(12%) saturate(1086%) hue-rotate(179deg)
     brightness(92%) contrast(88%);
 }
 
@@ -750,7 +752,8 @@
     justify-items: center;
     padding: 135px 24px;
     margin: 0 118px;
-    border: 2px solid green;
+
+    /* border: 2px solid green; */
   }
 
   .recent-works-header {
@@ -784,9 +787,10 @@
     align-items: center;
     padding: 0;
   }
-  /* 
+
+  /*
   .featured {
-    display: grid;   
+    display: grid;
     grid-template-columns: 2fr 1frsssss;
     border: 2px solid rgb(140, 0, 255);
   } */
@@ -822,9 +826,6 @@
   }
 
   #about-and-skill-section {
-    /* align-items: center;     */
-    /* background: var(--deepDark); */
-    /* height: 1195px; */
     background-image: url(./illustrations/Desktop-Aboutme-illustration.svg);
     background-repeat: no-repeat;
     background-position: 100% 100px;
