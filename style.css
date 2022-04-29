@@ -804,6 +804,12 @@
     display: none;
   }
 
+  .first-card-img-desktop {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
   .first-card {
     padding-left: 24px;
   }
