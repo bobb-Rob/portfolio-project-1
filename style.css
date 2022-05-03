@@ -52,11 +52,11 @@
   color: #ff6b00;
 }
 
-.icon-btn {
+/* .icon-btn {
   background: none;
   outline: none;
   border: none;
-}
+} */
 
 .hamburger-btn:hover {
   cursor: pointer;
@@ -170,8 +170,7 @@
 .btn {
   padding: 12px;
   background: var(--orange);
-  height: 48px;
-  outline: none;
+  height: 48px; 
   border: none;
   border-radius: 1px;
   transition: border 2s, color 2s, background-color 1s;
@@ -695,16 +694,8 @@
   }
 
   #desktop-nav-links > li > a {
-    /* nav links */
     text-decoration: none;
     color: var(--white);
-  }
-
-  #desktop-nav-links > li > button {
-    /* nav icon btn */
-    position: absolute;
-    inset: 0;
-    margin: auto;
   }
 
   #headline-section {
