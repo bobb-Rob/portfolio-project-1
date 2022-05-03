@@ -170,7 +170,7 @@
 .btn {
   padding: 12px;
   background: var(--orange);
-  height: 48px; 
+  height: 48px;
   border: none;
   border-radius: 1px;
   transition: border 2s, color 2s, background-color 1s;
