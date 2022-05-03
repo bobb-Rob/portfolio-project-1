@@ -52,11 +52,10 @@
   color: #ff6b00;
 }
 
-/* .icon-btn {
+.icon-btn {
   background: none;
-  outline: none;
   border: none;
-} */
+}
 
 .hamburger-btn:hover {
   cursor: pointer;
@@ -111,6 +110,9 @@
 
 .headline-social-media li {
   list-style: none;
+  background-color: none;
+  border-radius: 20px;
+  transition: background-color 1s;
 }
 
 .featured {
@@ -188,10 +190,11 @@
   color: #fff;
 }
 
-.btn-feature:hover {
+.btn:hover {
   border: 1px solid var(--orange);
   color: var(--orange);
   background-color: #fff5e1;
+  cursor: pointer;
 }
 
 .btn-feature:disabled {
@@ -461,12 +464,6 @@
   color: #fff;
 }
 
-.btn-form-submit:hover {
-  border: 1px solid var(--orange);
-  color: var(--orange);
-  background-color: #fff5e1;
-}
-
 .btn-form-submit:disabled {
   border: none;
   color: #5b5957;
@@ -506,6 +503,7 @@
 
 .social-media:hover {
   background: var(--lightdark);
+  border-radius: 5px;
 }
 
 #recent-works {
@@ -649,10 +647,6 @@
   .about-section-divider {
     width: 327px;
     margin: 80px 0 0 0;
-  }
-
-  .contact-input-desktop {
-    display: none;
   }
 }
 
@@ -880,10 +874,11 @@
     margin: 0 20px 0 0;
   }
 
-  .contact-input-mobile {
+  /* .contact-input-mobile {
     display: none;
-  }
+  } */
 
+  .contact-input-mobile,
   .email-input,
   .text-area {
     grid-column: 1 / 3;
