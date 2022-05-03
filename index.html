@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Portfolio</title>
+    <title>Robertson's Portfolio</title>
 </head>
 <body>
     <header id="header" >
@@ -22,26 +22,26 @@
                 <li>
                     <a href="#">Contact</a>
                 </li>
-                <li>
-                    <button type="button" class="icon-btn"> 
-                        <img src="./icons/UnionMail-icon.png" alt="mail icon" > 
-                    </button>
+                <li>                  
+                    <a href="#">
+                        <img src="./icons/Envelope-Icon.svg" alt="mail icon" > 
+                    </a>                  
                 </li>
             </ul>
             <!-- Destop nav ends here -->
             <button type="button" class="hamburger-btn icon-btn">
-                <img src="./icons/Icon-Menumenu-icon.png" alt="Menu-icon">
+                <img src="./icons/Hamburger-menu-icon.svg" alt="Menu-icon">
             </button>
         </nav>
     </header>
-
+   
     <main id="main-content" >
         <section id="headline-section" >
             <div class="headline-text-wrapper">
                 <h1 class="headline-primary-text" >Hey There. <br> I’m Robertson</h1>
                 <h4>I’am a Software Developer</h4>
                 <p class="headline-desc" >I can help you build a product , feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, 
-                    don’t hestiate to contact me.
+                    don’t hesitate to contact me.
                 </p>
             </div>            
 
@@ -83,10 +83,10 @@
             <div class="my-works">
                 <div class="featured" >                   
                     <div class="first-card-image-container" >
-                        <img class="first-card-img-mobile" src="./images/Placeholder-feature-img.png" alt="project image">
+                        <img class="first-card-img-mobile" src="./images/mobile-first-card.svg" alt="project image">
                         <img 
                             class="first-card-img-desktop" 
-                            src="./images/Desktop-FirstCard.svg" 
+                            src="./images/Desktop-firstcard-img.svg" 
                             alt="project image"
                             
                             >
@@ -247,6 +247,7 @@
                <form id="contact-form" action="https://formspree.io/f/xvolvkdz"
                      method="POST" 
                 >
+                <label for="visitors-name" class="contact_form_label"></label>
                    <input 
                         class="text-input contact-input-mobile" 
                         type="text"  
@@ -254,32 +255,17 @@
                         placeholder="Full name"
                         maxlength="30"
                         required
-                    >
-                   <input 
-                        class="text-input contact-input-desktop first-name" 
-                        type="text"  
-                        id="first-name"                       
-                        placeholder="First Name"
-                        maxlength="30"
-                        required
-                    >
-                   <input 
-                        class="text-input contact-input-desktop" 
-                        type="text"  
-                        id="last-name"                       
-                        placeholder="Last Name"
-                        maxlength="30"
-                        required
-                    >
-                   
+                    >                    
+                    <label for="visitors-email" class="contact_form_label"></label>
                     <input 
                         class="text-input email-input" 
                         type="email" 
                         name="email" 
-                        id="visiotors-email"
+                        id="visitors-email"
                         placeholder="Email address"                      
                         required
                     >
+                    <label for="contact-text-area" class="contact_form_label"></label>
                     <textarea 
                         class="text-area"
                         name="contact-text" 

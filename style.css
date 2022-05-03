@@ -54,7 +54,6 @@
 
 .icon-btn {
   background: none;
-  outline: none;
   border: none;
 }
 
@@ -111,6 +110,9 @@
 
 .headline-social-media li {
   list-style: none;
+  background-color: none;
+  border-radius: 20px;
+  transition: background-color 1s;
 }
 
 .featured {
@@ -171,7 +173,6 @@
   padding: 12px;
   background: var(--orange);
   height: 48px;
-  outline: none;
   border: none;
   border-radius: 1px;
   transition: border 2s, color 2s, background-color 1s;
@@ -189,10 +190,11 @@
   color: #fff;
 }
 
-.btn-feature:hover {
+.btn:hover {
   border: 1px solid var(--orange);
   color: var(--orange);
   background-color: #fff5e1;
+  cursor: pointer;
 }
 
 .btn-feature:disabled {
@@ -205,7 +207,7 @@
   margin: 24px 0 0 0;
   position: relative;
   list-style: none;
-  background: url(./images/card-image.png);
+  background: url(./images/project-card-img.svg);
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 369px;
@@ -462,12 +464,6 @@
   color: #fff;
 }
 
-.btn-form-submit:hover {
-  border: 1px solid var(--orange);
-  color: var(--orange);
-  background-color: #fff5e1;
-}
-
 .btn-form-submit:disabled {
   border: none;
   color: #5b5957;
@@ -507,6 +503,7 @@
 
 .social-media:hover {
   background: var(--lightdark);
+  border-radius: 5px;
 }
 
 #recent-works {
@@ -605,7 +602,7 @@
     flex-direction: column;
     align-items: center;
     height: 1901px;
-    background-image: url(./illustrations/Frame.png);
+    background-image: url(./illustrations/about-section-img.svg);
     background-repeat: no-repeat;
     background-position: 100% 20%;
   }
@@ -651,10 +648,6 @@
     width: 327px;
     margin: 80px 0 0 0;
   }
-
-  .contact-input-desktop {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -695,16 +688,8 @@
   }
 
   #desktop-nav-links > li > a {
-    /* nav links */
     text-decoration: none;
     color: var(--white);
-  }
-
-  #desktop-nav-links > li > button {
-    /* nav icon btn */
-    position: absolute;
-    inset: 0;
-    margin: auto;
   }
 
   #headline-section {
@@ -882,16 +867,18 @@
     margin: 0;
     min-width: 327px;
     flex-grow: 1;
+    position: relative;
   }
 
   .first-name {
     margin: 0 20px 0 0;
   }
 
-  .contact-input-mobile {
+  /* .contact-input-mobile {
     display: none;
-  }
+  } */
 
+  .contact-input-mobile,
   .email-input,
   .text-area {
     grid-column: 1 / 3;
@@ -899,5 +886,9 @@
 
   .btn-form-submit {
     width: 132px;
+  }
+
+  .contact_form_label {
+    position: absolute;
   }
 }
