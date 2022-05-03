@@ -1,12 +1,16 @@
-# portfolio-project
+# Portfolio Project
 
-> This is a Portfolio project to show case my tech skills. The development approach is mobile first.
+> This my Portfolio project to show case my web development skills. The development approach is mobile first.
+
+Below is the link to view the portfolio online
+
+> [My Portfolio](https://bobb-rob.github.io/portfolio-project-1/)
 
 ## Built With:
 
 - HTML
 - CSS
-- ES6lint
+- Javascript
 
 ## Getting Started
 
@@ -23,6 +27,7 @@ To get a local copy up and running follow these simple example steps.
 ### Setup
 
 > To clone this repository, please follow the steps below:
+
 #### **Clone Git Repository In GitHub**
 
 - In the File menu, click Clone Repository.
@@ -36,9 +41,11 @@ or
 #### **Clone Git Repository In Visual Studio Code**
 
 - Open VSCode and select a folder where to download the Git project to (Ctrl + K wait a second Ctrl + O):
+
   > Top Menu -> Files -> Open Folder...
 
 - Start the terminal (Ctrl + `):
+
   > Top Menu -> View-> Terminal
 
 - Execute the git clone command in the terminal:
@@ -50,7 +57,7 @@ or
 - install stylelint. Follow the Docs [here](https://stylelint.io/user-guide/get-started)
 - install webHint. Follow the Docs [here](https://webhint.io/docs/user-guide/#install-webhint)
 
-## Author
+## Authors
 
 ### Robertson Akpan
 
@@ -59,9 +66,11 @@ or
 - LinkedIn: https://www.linkedin.com/in/robertson-arthur-6895a0123/
 
 ### Tahseen Zahrah
+
 GitHub: [@tahseenzahra](https://github.com/tahseenzahra)
 
 ### Muhammad Shaheer
+
 GitHub: [@shaheerCH](https://github.com/shaheerCH)
 
 ## 🤝 Contributing
