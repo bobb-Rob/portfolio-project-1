@@ -654,8 +654,22 @@
     list-style: none;
     text-decoration: none;
     position: absolute;
-    left: 20px;
+    left: 0;
     background-color: var(--lightdark);
+    padding: 60px 108px 40px 40px;
+  }
+  #nav-links li {
+    padding: 4px;
+    width: 100%;
+
+  }
+
+  #nav-links a {
+    color: #fff5e1;
+    /* border: 1px solid var(--white); */
+    width: 100%;
+    margin: 8px;
+
   }
 }
 
