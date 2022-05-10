@@ -205,7 +205,8 @@
 
 .project-card {
   margin: 24px 0 0 0;
-  position: relative;
+
+  /* position: relative; */
   list-style: none;
   background: url(./images/project-card-img.svg);
   background-repeat: no-repeat;
@@ -491,9 +492,7 @@
   display: flex;
   list-style: none;
   height: 40px;
-  filter:
-    invert(37%) sepia(12%) saturate(1086%) hue-rotate(179deg)
-    brightness(92%) contrast(88%);
+  filter: invert(37%) sepia(12%) saturate(1086%) hue-rotate(179deg) brightness(92%) contrast(88%);
 }
 
 .social-media {
@@ -513,10 +512,13 @@
   padding: 120px 0;
 }
 
-/* Desktop Version Starts Here */
+#nav-links {
+  list-style: none;
+}
 
-#desktop-nav-links {
-  display: none;
+#nav-links > .section-link > a {
+  text-decoration: none;
+  color: var(--white);
 }
 
 @media screen and (max-width: 768px) {
@@ -648,8 +650,41 @@
     width: 327px;
     margin: 80px 0 0 0;
   }
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--lightdark);
+    padding: 60px 40px 40px 40px;
+    z-index: 100;
+  }
+
+  #nav-links .section-link {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    width: 100%;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid #6f6c6b;
+  }
+
+  .close-icon-wrapper {
+    position: absolute;
+    top: 35px;
+    left: 86%;
+    list-style: none;
+  }
 }
 
+/* Desktop css code begins here */
 @media screen and (min-width: 768px) {
   #logo {
     font-family: "Inter", sans-serif;
@@ -671,25 +706,18 @@
     display: none;
   }
 
-  #desktop-nav-links {
+  #nav-links {
     display: flex;
-    list-style: none;
     margin-right: 151px;
     font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
-    line-height: 20px;
+    line-height: 1.25rem;
   }
 
-  #desktop-nav-links > li {
-    margin: 0 16px 0 16px;
-    position: relative;
-  }
-
-  #desktop-nav-links > li > a {
-    text-decoration: none;
-    color: var(--white);
+  #nav-links > .section-link {
+    margin: 0 1rem 0 1rem;
   }
 
   #headline-section {
@@ -738,8 +766,6 @@
     justify-items: center;
     padding: 135px 24px;
     margin: 0 118px;
-
-    /* border: 2px solid green; */
   }
 
   .recent-works-header {
@@ -873,10 +899,6 @@
   .first-name {
     margin: 0 20px 0 0;
   }
-
-  /* .contact-input-mobile {
-    display: none;
-  } */
 
   .contact-input-mobile,
   .email-input,
