@@ -16,12 +16,10 @@ const executeEvent = () => {
     crossWrapper.appendChild(closeIcon);
     navLinksWrapper.appendChild(crossWrapper);
     navLinksWrapper.style.display = 'flex';
-    navLinksWrapper.lastElementChild.previousElementSibling.style.display =
-      'none';
+    navLinksWrapper.lastElementChild.previousElementSibling.style.display = 'none';
 
     closeIcon.addEventListener('click', () => {
       navLinksWrapper.style.display = 'none';
-      envelopeElem.style.display = 'block';
       crossWrapper.remove();
     });
 
@@ -33,8 +31,6 @@ const executeEvent = () => {
         crossWrapper.remove();
       });
     });
-
-    console.log(navLinksArr);
   });
 };
 

@@ -205,6 +205,7 @@
 
 .project-card {
   margin: 24px 0 0 0;
+
   /* position: relative; */
   list-style: none;
   background: url(./images/project-card-img.svg);
@@ -656,7 +657,7 @@
     display: none;
     flex-direction: column;
     width: 100vw;
-    height: 100vh;     
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -666,7 +667,7 @@
     border: 1px solid red;
   }
 
-  #nav-links .section-link {   
+  #nav-links .section-link {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -680,9 +681,9 @@
 
   .close-icon-wrapper {
     position: absolute;
-    top: 35px;    
+    top: 35px;
     left: 86%;
-    list-style: none;  
+    list-style: none;
   }
 }
 
@@ -709,7 +710,7 @@
   }
 
   #nav-links {
-    display: flex;   
+    display: flex;
     margin-right: 151px;
     font-family: "Inter", sans-serif;
     font-style: normal;
@@ -719,7 +720,7 @@
   }
 
   #nav-links > .section-link {
-    margin: 0 1rem 0 1rem;    
+    margin: 0 1rem 0 1rem;
   }
 
   #headline-section {
