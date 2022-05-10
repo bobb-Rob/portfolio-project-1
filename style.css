@@ -492,9 +492,7 @@
   display: flex;
   list-style: none;
   height: 40px;
-  filter:
-    invert(37%) sepia(12%) saturate(1086%) hue-rotate(179deg)
-    brightness(92%) contrast(88%);
+  filter: invert(37%) sepia(12%) saturate(1086%) hue-rotate(179deg) brightness(92%) contrast(88%);
 }
 
 .social-media {
@@ -664,7 +662,6 @@
     background-color: var(--lightdark);
     padding: 60px 40px 40px 40px;
     z-index: 100;
-    border: 1px solid red;
   }
 
   #nav-links .section-link {
