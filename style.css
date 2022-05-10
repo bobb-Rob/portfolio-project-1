@@ -205,7 +205,7 @@
 
 .project-card {
   margin: 24px 0 0 0;
-  position: relative;
+  /* position: relative; */
   list-style: none;
   background: url(./images/project-card-img.svg);
   background-repeat: no-repeat;
@@ -514,7 +514,12 @@
 }
 
 #nav-links {
-  display: none;
+  list-style: none;
+}
+
+#nav-links > .section-link > a {
+  text-decoration: none;
+  color: var(--white);
 }
 
 @media screen and (max-width: 768px) {
@@ -648,33 +653,40 @@
   }
 
   #nav-links {
+    display: none;
     flex-direction: column;
     width: 100vw;
-    height: 100vh;
-    list-style: none;
-    text-decoration: none;
-    position: absolute;
+    height: 100vh;     
+    position: fixed;
+    top: 0;
     left: 0;
     background-color: var(--lightdark);
-    padding: 60px 108px 40px 40px;
-  }
-  #nav-links li {
-    padding: 4px;
-    width: 100%;
-
+    padding: 60px 40px 40px 40px;
+    z-index: 100;
+    border: 1px solid red;
   }
 
-  #nav-links a {
-    color: #fff5e1;
-    /* border: 1px solid var(--white); */
+  #nav-links .section-link {   
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
     width: 100%;
-    margin: 8px;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid #6f6c6b;
+  }
 
+  .close-icon-wrapper {
+    position: absolute;
+    top: 35px;    
+    left: 86%;
+    list-style: none;  
   }
 }
 
 /* Desktop css code begins here */
-
 @media screen and (min-width: 768px) {
   #logo {
     font-family: "Inter", sans-serif;
@@ -697,8 +709,7 @@
   }
 
   #nav-links {
-    display: flex;
-    list-style: none;
+    display: flex;   
     margin-right: 151px;
     font-family: "Inter", sans-serif;
     font-style: normal;
@@ -707,13 +718,8 @@
     line-height: 1.25rem;
   }
 
-  #nav-links > li {
+  #nav-links > .section-link {
     margin: 0 1rem 0 1rem;    
-  }
-
-  #nav-links > li > a {
-    text-decoration: none;
-    color: var(--white);
   }
 
   #headline-section {
