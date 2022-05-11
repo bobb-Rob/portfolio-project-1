@@ -1,37 +1,31 @@
-const executeEvent = () => {
-  function createElement(elem, className) {
-    const closeIcon = document.createElement(elem);
-    closeIcon.classList.add(className);
-    return closeIcon;
-  }
-
-  const hamburgerBtn = document.querySelector('.hamburger-btn');
-  const navLinksWrapper = document.getElementById('nav-links');
-
-  hamburgerBtn.addEventListener('click', () => {
-    const closeIcon = createElement('img', 'close-icon');
-    const crossWrapper = createElement('li', 'close-icon-wrapper');
-    closeIcon.src = './icons/close-icon.png';
-    closeIcon.alt = 'close icon';
-    crossWrapper.appendChild(closeIcon);
-    navLinksWrapper.appendChild(crossWrapper);
-    navLinksWrapper.style.display = 'flex';
-    navLinksWrapper.lastElementChild.previousElementSibling.style.display = 'none';
-
-    closeIcon.addEventListener('click', () => {
-      navLinksWrapper.style.display = 'none';
-      crossWrapper.remove();
-    });
-
-    const navlinks = document.querySelectorAll('li.section-link > a');
-    const navLinksArr = Array.from(navlinks);
-    navLinksArr.forEach((link) => {
-      link.addEventListener('click', () => {
-        navLinksWrapper.style.display = 'none';
-        crossWrapper.remove();
-      });
-    });
+const executeEvent = (() => {
+    
+  // Add event listener to the hamburger btn
+  DOM.hamburgerBtn.addEventListener('click', () => { 
+    DOM.createCloseIcon(DOM.navLinksWrapper, 'li');   
+    DOM.navLinksWrapper.classList.add('display-f');
+   document.querySelector('.envelope').classList.add('display-n');
+   // Add the click event on the close btn on menu
+    document.querySelector('.close-icon').addEventListener('click', () => {     
+      DOM.navLinksWrapper.classList.remove('display-f');
+      document.querySelector('.envelope').classList.remove('display-n');
+      document.querySelector('.close-icon-wrapper').remove();      
+    });     
   });
-};
 
-executeEvent();
+   //Attach click events on all the "a" tags both desktop and mobile
+   const navLinksArr = Array.from(document.querySelectorAll('li.insert-event > a'));    
+   navLinksArr.forEach((link) => {
+     link.addEventListener('click', function closeMenu() {
+       DOM.navLinksWrapper.classList.remove('display-f'); // Remove display: flex !important class
+       document.querySelector('.envelope').classList.remove('display-n');
+       document.querySelector('.close-icon-wrapper').remove();
+     });
+   }); 
+   
+   
+ 
+   
+
+
+})();

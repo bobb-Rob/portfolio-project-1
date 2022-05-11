@@ -125,7 +125,7 @@
   padding: 0;
 }
 
-.first-card > h3 {
+.first-card>h3 {
   font-family: "Crete Round", serif;
   font-style: normal;
   font-weight: 400;
@@ -137,7 +137,7 @@
   margin: 12px 0;
 }
 
-.first-card > p {
+.first-card>p {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -147,7 +147,7 @@
   margin: 12px 0;
 }
 
-.first-card > ul {
+.first-card>ul {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -205,10 +205,7 @@
 
 .project-card {
   margin: 24px 0 0 0;
-
-  /* position: relative; */
   list-style: none;
-  background: url(./images/project-card-img.svg);
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 369px;
@@ -222,7 +219,7 @@
   margin: 70px 0 14px 0;
 }
 
-.card-description > h3 {
+.card-description>h3 {
   font-family: "Crete Round", serif;
   font-style: normal;
   font-weight: 400;
@@ -232,7 +229,7 @@
   height: 81px;
 }
 
-.card-description > p {
+.card-description>p {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -516,7 +513,7 @@
   list-style: none;
 }
 
-#nav-links > .section-link > a {
+#nav-links>.section-link>a {
   text-decoration: none;
   color: var(--white);
 }
@@ -535,7 +532,7 @@
     padding: 0;
   }
 
-  .recent-works-header > h2 {
+  .recent-works-header>h2 {
     font-family: "Crete Round", serif;
     font-style: normal;
     font-weight: 400;
@@ -581,7 +578,7 @@
     padding: 0;
   }
 
-  .first-card > h3 {
+  .first-card>h3 {
     font-family: "Crete Round", serif;
     font-style: normal;
     font-weight: 400;
@@ -664,6 +661,14 @@
     z-index: 100;
   }
 
+  .display-f {
+    display: flex !important;
+  }
+
+  .display-n {
+    display: none !important;
+  }
+
   #nav-links .section-link {
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -716,8 +721,13 @@
     line-height: 1.25rem;
   }
 
-  #nav-links > .section-link {
+  #nav-links>.section-link {
     margin: 0 1rem 0 1rem;
+  }
+
+  /* Hide menu close btn in desktop view */
+  .close-icon-wrapper {
+    display: none !important;
   }
 
   #headline-section {
@@ -782,7 +792,7 @@
     margin: 0 24px 0 0;
   }
 
-  .recent-works-header > h2 {
+  .recent-works-header>h2 {
     font-family: "Crete Round", serif;
     font-style: normal;
     font-weight: 400;
@@ -825,7 +835,7 @@
     padding-left: 24px;
   }
 
-  .first-card > h3 {
+  .first-card>h3 {
     font-weight: 400;
     font-size: 40px;
     line-height: 52px;
