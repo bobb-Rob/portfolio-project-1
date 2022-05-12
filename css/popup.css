@@ -48,6 +48,20 @@
   margin-top: 0.625rem;
 }
 
+.popup-btn > a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.popup-btn > a:hover {    
+  color: var(--orange);  
+}
+
+.popup-btn > a > img:hover {
+  filter: 
+    invert(42%) sepia(65%) saturate(2553%) hue-rotate(2deg) brightness(106%) contrast(102%);
+}
+
 /* Mobile view pop-up */
 @media screen and (max-width: 48rem) {
   .popup-container {

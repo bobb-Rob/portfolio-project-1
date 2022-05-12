@@ -89,23 +89,23 @@ const DOM = (() => {
 
   // Projects card display function
   const cardContainer = document.getElementById('card-container');
-  const createProjectCard = (projName, description, imageURL, tech, projId) => {
+  const createProjectCard = (project) => {
     const listItem = createElement('li', 'project-card');
-    listItem.style.background = `${imageURL}`;
-    listItem.id = projId;
+    listItem.style.background = `${project.featuredImage}`;
+    listItem.id = project.id;
 
     const projectName = createElement('h3');
-    projectName.textContent = `${projName}`;
+    projectName.textContent = `${project.name}`;
 
     const projectDescription = createElement('p');
-    projectDescription.textContent = `${description}`;
+    projectDescription.textContent = `${project.description}`;
 
     const techListItem1 = createElement('li');
-    techListItem1.textContent = `${tech[0]}`;
+    techListItem1.textContent = `${project.technologies[0]}`;
     const techListItem2 = createElement('li');
-    techListItem2.textContent = `${tech[1]}`;
+    techListItem2.textContent = `${project.technologies[1]}`;
     const techListItem3 = createElement('li');
-    techListItem3.textContent = `${tech[2]}`;
+    techListItem3.textContent = `${project.technologies[2]}`;
     const techUL = createElement('ul', 'description-tags');
     techUL.appendChild(techListItem1);
     techUL.appendChild(techListItem2);
@@ -126,38 +126,32 @@ const DOM = (() => {
   };
 
   // Project card display map
-  projects.map((project) => cardContainer.appendChild(
-    createProjectCard(
-      project.name,
-      project.description,
-      project.featuredImage,
-      project.technologies,
-      project.id,
-    ),
-  ));
+  projects.map((project) => cardContainer.appendChild(createProjectCard(project)));
 
   // Project pop up window create function
-  const createPopupWindow = (projName, techStack, popupImage, description) => {
+  const createPopupWindow = (project) => {
     const projectModal = createElement('div', 'project-modal');
     const popupContainer = createElement('div', 'popup-container');
     popupContainer.innerHTML = `
-            <h2>${projName}</h2>
+            <h2>${project.name}</h2>
             <ul class="tech-stack">
-              ${techStack.map((tech) => `<li>${tech}</li>`)}
+              ${project.technologies.map((tech) => `<li>${tech}</li>`)}
             </ul>
             <div class="popup-img-p">
-                <img src="${popupImage}" alt="${projName}">
+                <img src="${project.popupImage}" alt="${project.name}">
 
                 <div class="popup-btn-wrapper">
-                    <p>${description}</p>
+                    <p>${project.description}</p>
                     
                     <button class="btn popup-btn" type="button">
-                        <span>See Live</span>
+                        <a href="${project.liveLink}">See Live
                         <img src="./icons/new-window-icon.svg" alt="New window icon">
+                        </a>                        
                     </button>
                     <button class="btn popup-btn" type="button">
-                        <span>See Source</span>
+                        <a href="${project.sourceFile}">See Source
                         <img src="./icons/github-icon.svg" alt="github icon">
+                        </a>                        
                     </button>
                 </div>
             </div>
@@ -218,17 +212,8 @@ const executeEvent = () => {
       // Filter the project by id
       const project = projects.filter(
         (proj) => proj.id === e.target.parentElement.id,
-      );
-      const i = project[0];
-      DOM.workSection.appendChild(
-        DOM.createPopupWindow(
-          i.name,
-          i.technologies,
-          i.popupImage,
-          i.description,
-        ),
-      );
-
+      );      
+      DOM.workSection.appendChild(DOM.createPopupWindow(project[0]));
       //  Lister for click on close icon in popup container
       DOM.createCloseIcon(document.querySelector('.popup-container'), 'span');
       const popupCloseIcon = document.querySelector('span.close-icon-wrapper');
