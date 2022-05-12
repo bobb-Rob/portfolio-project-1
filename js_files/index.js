@@ -14,7 +14,7 @@ const projects = [
     description: "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard",
     featuredImage: 'url(./images/project-card-img.svg)',
     popupImage: './images/mobilePop-up.svg',
-    technologies: ['html', 'bootstrap', 'ruby'],
+    technologies: ['html', 'bootstrap', 'ruby', 'nodeJs'],
     liveLink: 'https://bobb-rob.github.io/portfolio-project-1/',
     sourceFile: 'https://github.com/bobb-rob/portfolio-project-1',
     id: '2',
@@ -127,6 +127,7 @@ const DOM = (() => {
 
   // Project pop up window create function
   const createPopupWindow = (projName, techStack, popupImage, description) => {
+    // Use destructuring here
     const projectModal = createElement('div', 'project-modal');
     const popupContainer = createElement('div', 'popup-container');
     popupContainer.innerHTML = `       
