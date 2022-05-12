@@ -212,7 +212,7 @@ const executeEvent = () => {
       // Filter the project by id
       const project = projects.filter(
         (proj) => proj.id === e.target.parentElement.id,
-      );      
+      );
       DOM.workSection.appendChild(DOM.createPopupWindow(project[0]));
       //  Lister for click on close icon in popup container
       DOM.createCloseIcon(document.querySelector('.popup-container'), 'span');

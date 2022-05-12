@@ -45,7 +45,7 @@
   line-height: 24px;
   color: var(--white);
   transition-property: color;
-  transition-duration: 0.5s; 
+  transition-duration: 0.5s;
 }
 
 #logo:hover {
