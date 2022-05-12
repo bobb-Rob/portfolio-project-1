@@ -1,7 +1,7 @@
 const projects = [
   {
     name: 'Data Dashboard Health Care',
-    popupName: "Multi Post Stories",
+    popupName: 'Multi Post Stories',
     description:
       "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard",
     featuredImage: 'url(./images/project-card-img.svg)',
@@ -16,7 +16,7 @@ const projects = [
   },
   {
     name: 'Website Portfolio',
-    popupName: "Multi Post Stories",
+    popupName: 'Multi Post Stories',
     description:
       "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard",
     featuredImage: 'url(./images/project-card-img.svg)',
@@ -31,7 +31,7 @@ const projects = [
   },
   {
     name: 'Profesional Art Printing Data',
-    popupName: "Multi Post Stories",
+    popupName: 'Multi Post Stories',
     description:
       "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard",
     featuredImage: 'url(./images/project-card-img.svg)',
@@ -46,7 +46,7 @@ const projects = [
   },
   {
     name: 'Profesional Art Printing Data',
-    popupName: "Multi Post Stories",
+    popupName: 'Multi Post Stories',
     description:
       "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard",
     featuredImage: 'url(./images/project-card-img.svg)',
@@ -61,7 +61,7 @@ const projects = [
   },
   {
     name: 'Profesional Art Printing Data',
-    popupName: "Multi Post Stories",
+    popupName: 'Multi Post Stories',
     description:
       "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard",
     featuredImage: 'url(./images/project-card-img.svg)',
@@ -76,7 +76,7 @@ const projects = [
   },
   {
     name: 'Profesional Art Printing Data',
-    popupName: "Multi Post Stories",
+    popupName: 'Multi Post Stories',
     description:
       "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard",
     featuredImage: 'url(./images/project-card-img.svg)',
@@ -88,12 +88,12 @@ const projects = [
     liveLink: 'https://bobb-rob.github.io/portfolio-project-1/',
     sourceFile: 'https://github.com/bobb-rob/portfolio-project-1',
     id: '6',
-  },  
+  },
 ];
 
 const projects2 = [{
   name: 'Profesional Art Printing Data',
-  popupName: "Multi Post Stories",
+  popupName: 'Multi Post Stories',
   description:
     "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard",
   featuredImage: 'url(./images/project-card-img.svg)',
@@ -105,8 +105,7 @@ const projects2 = [{
   liveLink: 'https://bobb-rob.github.io/portfolio-project-1/',
   sourceFile: 'https://github.com/bobb-rob/portfolio-project-1',
   id: '6',
-},]
-
+}];
 
 const DOM = (() => {
   // create Element function
@@ -275,12 +274,12 @@ const executeEvent = () => {
   const firstCardButton = document.querySelector('.btn-feature');
   firstCardButton.addEventListener('click', () => {
     DOM.workSection.appendChild(DOM.createPopupWindow(projects2[0]));
-      //  Lister for click on close icon in popup container
-      DOM.createCloseIcon(document.querySelector('.popup-container'), 'span');
-      const popupCloseIcon = document.querySelector('span.close-icon-wrapper');
-      popupCloseIcon.addEventListener('click', () => {
-        document.querySelector('.project-modal').remove();
-      });      
+    //  Lister for click on close icon in popup container
+    DOM.createCloseIcon(document.querySelector('.popup-container'), 'span');
+    const popupCloseIcon = document.querySelector('span.close-icon-wrapper');
+    popupCloseIcon.addEventListener('click', () => {
+      document.querySelector('.project-modal').remove();
+    });
   });
 };
 executeEvent();
