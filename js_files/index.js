@@ -104,7 +104,7 @@ const projects2 = [{
   technologies: ['html', 'bootstrap', 'ruby and rails'],
   liveLink: 'https://bobb-rob.github.io/portfolio-project-1/',
   sourceFile: 'https://github.com/bobb-rob/portfolio-project-1',
-  id: '6',
+  id: 'x1',
 }];
 
 const DOM = (() => {

@@ -26,6 +26,8 @@
 .tech-stack {
   display: flex;
   margin-bottom: 1.325rem;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .tech-stack > li {
