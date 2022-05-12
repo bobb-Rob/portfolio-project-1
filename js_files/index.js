@@ -1,71 +1,112 @@
 const projects = [
   {
     name: 'Data Dashboard Health Care',
+    popupName: "Multi Post Stories",
     description:
       "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard",
     featuredImage: 'url(./images/project-card-img.svg)',
-    popupImage: './images/mobilePop-up.svg',
-    technologies: ['html', 'bootstrap', 'ruby'],
+    popupDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+      industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to 
+      make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent`,
+    popupImage: './images/DesktopPopup.svg',
+    technologies: ['html', 'bootstrap', 'ruby and rails'],
     liveLink: 'https://bobb-rob.github.io/portfolio-project-1/',
     sourceFile: 'https://github.com/bobb-rob/portfolio-project-1',
     id: '1',
   },
   {
     name: 'Website Portfolio',
+    popupName: "Multi Post Stories",
     description:
       "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard",
     featuredImage: 'url(./images/project-card-img.svg)',
-    popupImage: './images/mobilePop-up.svg',
-    technologies: ['html', 'bootstrap', 'ruby'],
+    popupDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+      industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to 
+      make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent`,
+    popupImage: './images/DesktopPopup.svg',
+    technologies: ['html', 'bootstrap', 'ruby and rails'],
     liveLink: 'https://bobb-rob.github.io/portfolio-project-1/',
     sourceFile: 'https://github.com/bobb-rob/portfolio-project-1',
     id: '2',
   },
   {
     name: 'Profesional Art Printing Data',
+    popupName: "Multi Post Stories",
     description:
       "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard",
     featuredImage: 'url(./images/project-card-img.svg)',
-    popupImage: './images/mobilePop-up.svg',
-    technologies: ['html', 'bootstrap', 'ruby'],
+    popupDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+      industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to 
+      make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent`,
+    popupImage: './images/DesktopPopup.svg',
+    technologies: ['html', 'bootstrap', 'ruby and rails'],
     liveLink: 'https://bobb-rob.github.io/portfolio-project-1/',
     sourceFile: 'https://github.com/bobb-rob/portfolio-project-1',
     id: '3',
   },
   {
     name: 'Profesional Art Printing Data',
+    popupName: "Multi Post Stories",
     description:
       "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard",
     featuredImage: 'url(./images/project-card-img.svg)',
-    popupImage: './images/mobilePop-up.svg',
-    technologies: ['html', 'bootstrap', 'ruby'],
+    popupDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+      industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to 
+      make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent`,
+    popupImage: './images/DesktopPopup.svg',
+    technologies: ['html', 'bootstrap', 'ruby and rails'],
     liveLink: 'https://bobb-rob.github.io/portfolio-project-1/',
     sourceFile: 'https://github.com/bobb-rob/portfolio-project-1',
     id: '4',
   },
   {
     name: 'Profesional Art Printing Data',
+    popupName: "Multi Post Stories",
     description:
       "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard",
     featuredImage: 'url(./images/project-card-img.svg)',
-    popupImage: './images/mobilePop-up.svg',
-    technologies: ['html', 'bootstrap', 'ruby'],
+    popupDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+      industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to 
+      make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent`,
+    popupImage: './images/DesktopPopup.svg',
+    technologies: ['html', 'bootstrap', 'ruby and rails'],
     liveLink: 'https://bobb-rob.github.io/portfolio-project-1/',
     sourceFile: 'https://github.com/bobb-rob/portfolio-project-1',
     id: '5',
   },
   {
     name: 'Profesional Art Printing Data',
+    popupName: "Multi Post Stories",
     description:
       "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard",
     featuredImage: 'url(./images/project-card-img.svg)',
-    popupImage: './images/mobilePop-up.svg',
-    technologies: ['html', 'bootstrap', 'ruby'],
+    popupDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+      industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to 
+      make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent`,
+    popupImage: './images/DesktopPopup.svg',
+    technologies: ['html', 'bootstrap', 'ruby and rails'],
     liveLink: 'https://bobb-rob.github.io/portfolio-project-1/',
     sourceFile: 'https://github.com/bobb-rob/portfolio-project-1',
     id: '6',
-  },
+  },  
 ];
+
+const projects2 = [{
+  name: 'Profesional Art Printing Data',
+  popupName: "Multi Post Stories",
+  description:
+    "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard",
+  featuredImage: 'url(./images/project-card-img.svg)',
+  popupDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to 
+    make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent`,
+  popupImage: './images/DesktopPopup.svg',
+  technologies: ['html', 'bootstrap', 'ruby and rails'],
+  liveLink: 'https://bobb-rob.github.io/portfolio-project-1/',
+  sourceFile: 'https://github.com/bobb-rob/portfolio-project-1',
+  id: '6',
+},]
+
 
 const DOM = (() => {
   // create Element function
@@ -133,7 +174,7 @@ const DOM = (() => {
     const projectModal = createElement('div', 'project-modal');
     const popupContainer = createElement('div', 'popup-container');
     popupContainer.innerHTML = `
-            <h2>${project.name}</h2>
+            <h2>${project.popupName}</h2>
             <ul class="tech-stack">
               ${project.technologies.map((tech) => `<li>${tech}</li>`)}
             </ul>
@@ -141,18 +182,20 @@ const DOM = (() => {
                 <img src="${project.popupImage}" alt="${project.name}">
 
                 <div class="popup-btn-wrapper">
-                    <p>${project.description}</p>
+                    <p>${project.popupDescription}</p>
                     
-                    <button class="btn popup-btn" type="button">
-                        <a href="${project.liveLink}">See Live
-                        <img src="./icons/new-window-icon.svg" alt="New window icon">
-                        </a>                        
-                    </button>
-                    <button class="btn popup-btn" type="button">
-                        <a href="${project.sourceFile}">See Source
-                        <img src="./icons/github-icon.svg" alt="github icon">
-                        </a>                        
-                    </button>
+                    <div class="pop-btn-wrap">
+                      <button class="btn popup-btn" type="button">
+                          <a href="${project.liveLink}">See Live
+                          <img src="./icons/new-window-icon.svg" alt="New window icon">
+                          </a>                        
+                      </button>
+                      <button class="btn popup-btn" type="button">
+                          <a href="${project.sourceFile}">See Source
+                          <img src="./icons/github-icon.svg" alt="github icon">
+                          </a>                        
+                      </button>
+                    </div>
                 </div>
             </div>
         `;
@@ -231,7 +274,13 @@ const executeEvent = () => {
 
   const firstCardButton = document.querySelector('.btn-feature');
   firstCardButton.addEventListener('click', () => {
-    window.location = '#card-container';
+    DOM.workSection.appendChild(DOM.createPopupWindow(projects2[0]));
+      //  Lister for click on close icon in popup container
+      DOM.createCloseIcon(document.querySelector('.popup-container'), 'span');
+      const popupCloseIcon = document.querySelector('span.close-icon-wrapper');
+      popupCloseIcon.addEventListener('click', () => {
+        document.querySelector('.project-modal').remove();
+      });      
   });
 };
 executeEvent();

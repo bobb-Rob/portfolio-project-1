@@ -263,7 +263,7 @@
 
 .headline-social-media li:hover {
   cursor: pointer;
-  background-color: #3c3a39;
+  background-color: var(--lightdark);
 }
 
 .btn-card {
@@ -381,19 +381,19 @@
 }
 
 .language::before {
-  content: url(./illustrations/Rectangle55.png);
+  content: url(../illustrations/Rectangle55.png);
   position: absolute;
   left: -40px;
 }
 
 .framework::before {
-  content: url(./illustrations/Rectangle56.png);
+  content: url(../illustrations/Rectangle56.png);
   position: absolute;
   left: -30px;
 }
 
 .skills::before {
-  content: url(./illustrations/Rectangle57.png);
+  content: url(../illustrations/Rectangle57.png);
   position: absolute;
   left: -30px;
 }

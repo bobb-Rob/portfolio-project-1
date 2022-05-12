@@ -11,7 +11,7 @@
 }
 
 .popup-container {
-  background-color: var(--hawkesBlue);
+  background-color: var(--white);
   padding: 1.5rem;
   position: relative;
 }
@@ -20,11 +20,12 @@
   font-size: 2rem;
   line-height: 2.75rem;
   font-style: normal;
+  color: #172b4d;
 }
 
 .tech-stack {
   display: flex;
-  margin-bottom: 3.125rem;
+  margin-bottom: 1.325rem;
 }
 
 .tech-stack > li {
@@ -32,10 +33,31 @@
   margin: 0 0.5rem 0 0.5rem;
   padding: 0.5rem;
   border: 1px solid #979493;
+  color: var(--lightdark);
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
 }
 
 .popup-img-p {
   display: flex;
+}
+
+.popup-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.popup-btn-wrapper > p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563;
 }
 
 .popup-btn {
@@ -62,7 +84,7 @@
 }
 
 /* Mobile view pop-up */
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 768px) {
   .popup-container {
     width: 80%;
     margin: 15% auto;
@@ -72,6 +94,7 @@
   .popup-container h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
+    padding-bottom: 35px;
   }
 
   .popup-img-p {
@@ -82,7 +105,7 @@
 /* Desktop view pop-up */
 @media screen and (min-width: 48rem) {
   .popup-container {
-    width: 70%;
+    width: 85%;
     margin: 5% auto;
     height: min-content;
   }
@@ -93,8 +116,7 @@
   }
 
   .popup-img-p > img {
-    width: 49.5488vw;
-    height: 72.58vh;
+    flex: 2 1 auto;
   }
 
   .popup-btn-wrapper {
