@@ -1,0 +1,128 @@
+.project-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.8);
+    fill: blur(40px);
+}
+
+.popup-container {
+    background-color: var(--hawkesBlue);
+    padding: 1.5rem;
+    position: relative;
+}
+
+.popup-container h2 {
+    font-size: 2rem;
+    line-height: 2.75rem;
+    font-style: normal;
+}
+
+.tech-stack {
+    display: flex;
+    margin-bottom: 3.125rem;
+}
+
+.tech-stack>li {
+    list-style: none;
+    margin: 0 .5rem 0 .5rem;
+    padding: .5rem;
+    border: 1px solid #979493;
+}
+
+.popup-img-p {
+    display: flex;
+}
+
+.popup-btn {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    color: var(--white);
+}
+
+/* Mobile view pop-up */
+@media screen and (max-width: 48rem) {
+    .popup-container {
+        width: 80%;
+        margin: 15% auto;
+        height: min-content;
+    }
+
+    .popup-container h2 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+    }
+
+    .popup-img-p {
+        flex-direction: column;
+    }
+}
+
+/* Desktop view pop-up */
+@media screen and (min-width: 48rem) {
+    .popup-container {
+        width: 70%;
+        margin: 5% auto;
+        height: min-content;
+    }
+
+    .popup-container>h2 {
+        font-family: 'Crete Round', serif;
+        font-weight: 400;
+    }
+
+    .popup-img-p>img {
+        width: 49.5488vw;
+        height: 72.58vh;
+    }
+
+    .popup-btn-wrapper {
+        margin-left: 1.5625rem;
+    }
+
+    .popup-btn-wrapper>p {
+        min-height: 21rem;
+    }
+
+    .popup-btn {
+        margin: 1rem .625rem 0 0;
+        display: inline-block;
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 24px;
+        color: var(--white);
+    }
+
+}
+
+@media screen and (max-width: 1180px) {
+    .popup-img-p {
+        flex-direction: column;
+    }
+
+    .popup-btn-wrapper {
+        margin-left: 0 !important;
+    }
+
+    .popup-btn-wrapper>p {
+        min-height: 0 !important;
+        max-width: 690px;
+    }
+
+    .popup-img-p {
+        align-content: center;
+    }
+
+    .popup-img-p>img {
+        margin-bottom: 1rem;
+    }
+}

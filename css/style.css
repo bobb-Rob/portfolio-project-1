@@ -13,6 +13,7 @@
   --blue-like: #091e42;
   --orange: #ff6b00;
   --btn-disabledBGcolor: #f4f1f0;
+  --hawkesBlue: #dfe1e6;
 }
 
 #main-content {
@@ -473,7 +474,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid #dfe1e6;
+  border-top: 1px solid var(--hawkesBlue);
   padding-top: 10px;
 }
 
@@ -518,9 +519,17 @@
   color: var(--white);
 }
 
+.close-icon-wrapper {
+  position: absolute;
+  top: 35px;
+  left: 86%;
+  list-style: none;
+}
+
+/* Mobile view css codes starts here */
 @media screen and (max-width: 768px) {
   #headline-section {
-    background-image: url(./illustrations/Illustrationillustration.svg);
+    background-image: url(../illustrations/Illustrationillustration.svg);
     background-repeat: no-repeat;
     background-position: 100% 230px;
   }
@@ -601,7 +610,7 @@
     flex-direction: column;
     align-items: center;
     height: 1901px;
-    background-image: url(./illustrations/about-section-img.svg);
+    background-image: url(../illustrations/about-section-img.svg);
     background-repeat: no-repeat;
     background-position: 100% 20%;
   }
@@ -665,6 +674,10 @@
     display: flex !important;
   }
 
+  .display-b {
+    display: block !important;
+  }
+
   .display-n {
     display: none !important;
   }
@@ -681,12 +694,7 @@
     border-bottom: 1px solid #6f6c6b;
   }
 
-  .close-icon-wrapper {
-    position: absolute;
-    top: 35px;
-    left: 86%;
-    list-style: none;
-  }
+
 }
 
 /* Desktop css code begins here */
@@ -727,13 +735,13 @@
 
   /* Hide menu close btn in desktop view */
   .close-icon-wrapper {
-    display: none !important;
+    left: 93%;
   }
 
   #headline-section {
     height: 798px;
     padding: 192px 24px 24px 24px;
-    background-image: url(./illustrations/Illustration-headerdesktop.png);
+    background-image: url(../illustrations/Illustration-headerdesktop.png);
     background-repeat: no-repeat;
     background-position: 100% 0;
     position: relative;
@@ -776,6 +784,7 @@
     justify-items: center;
     padding: 135px 24px;
     margin: 0 118px;
+    position: relative;
   }
 
   .recent-works-header {
@@ -853,7 +862,7 @@
   }
 
   #about-and-skill-section {
-    background-image: url(./illustrations/Desktop-Aboutme-illustration.svg);
+    background-image: url(../illustrations/Desktop-Aboutme-illustration.svg);
     background-repeat: no-repeat;
     background-position: 100% 100px;
     padding: 0 142px 0 142px;
