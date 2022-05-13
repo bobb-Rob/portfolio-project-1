@@ -7,7 +7,7 @@
   width: 100%;
   overflow: auto;
   background: rgba(0, 0, 0, 0.8);
-  fill: blur(40px);
+  backdrop-filter: blur(4px);
 }
 
 .popup-container {
