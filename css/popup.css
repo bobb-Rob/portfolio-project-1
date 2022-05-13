@@ -88,8 +88,18 @@
 
 /* Email Validation */
 
+.email-check-message {
+  position: absolute;
+  top: 69%;
+  padding-left: 12px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+}
+
 .valid-email {
-  color: greenyellow;
+  color: rgb(7, 175, 47);
 }
 
 .invalid-email {

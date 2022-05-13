@@ -220,80 +220,55 @@ const DOM = (() => {
   };
 })();
 
-const formValidation = (() => {
-  
-//   const email = document.querySelector('#mail');
-// const form = document.querySelector('form')
-// form.addEventListener('submit', handleSubmit);
-// let errorMsg = document.querySelector('#message');
- 
-// function handleSubmit(e){
-//   e.preventDefault();
-//   let regex = /[A-Z]/ig;
-//   let userEmail = email.value;
-//   console.log(userEmail);
-//   userEmail.match(regex) ? console.log('error') : ('success');
-//   errorMsg.innerHTML = 'User email should be in lower case all through'
-//   errorMsg.classList.add('error');
-// }
-
-// const form = document.getElementById('form');
-// const mail = document.getElementById('email');
-// const message = document.querySelector('small');
-
-// function showError() {
-//   message.innerText = 'All letters in email must be in lowercase';
-//   message.classList.add('error');
-// }
-// function validateEmail(email) {
-//   const emailVal = email.value.trim();
-//   const lowerCaseWords = emailVal.toLowerCase();
-//   if (emailVal !== lowerCaseWords) {
-//     return showError();
-//   }
-//   message.innerText = '';
-//   return true;
-// }
-
-// form.addEventListener('submit', (e) => {
-//   e.preventDefault();
-//   if (validateEmail(mail)) {
-//     form.submit();
-//   }
-// });
-
-
-
-
+const formValidation = () => {
+  // Email lowercase sensitive validation
   const email = document.getElementById('visitors-email');
   const form = document.getElementById('contact-form');  
 
-  function showMessage(message){
-    const message = createElement('small');
-    
+  function showMessage(text, className){
+    const message = DOM.createElement('small', 'email-check-message');
+    message.classList.add(className);
+    message.textContent = text;
+    const submitBtn = document.querySelector('.btn-form-submit');
+    form.insertBefore( message, submitBtn);
   }
 
-  function validateEmail(email){
-    const emailValue = email.value.trim();
-    const lowerCaseEmail = emailValue.toLowerCase();
+  function validateEmail(){    
+    const emailValue = email.value.trim();    
+    const lowerCaseEmail = emailValue.toLowerCase();   
+
       if (emailValue !== lowerCaseEmail) {
-        return showMessage('Email should be lower case all through');
-      }
-     showMessage("Valid Email");
-      return true;
+        showMessage('Email should be lowercase all through', 'invalid-email');
+        return false;
+      }else {
+        showMessage("Valid Email", 'valid-email');
+        return true;
+      }     
   }
-  
+
+  function removeMessageOnFocus(){
+    const message = document.querySelector('.email-check-message');
+    console.log(message)
+    if(message){
+      message.remove();
+    }     
+  }
+
   function handleSubmit(e){
     e.preventDefault();
-    if(validateEmail(email)){
+    if(validateEmail()){
       form.submit();
     }
   }
 
+  // Validate email once email field losses focus
+  email.addEventListener('change', validateEmail);
+  // Remove message once email field regains focus
+  email.addEventListener('focus', removeMessageOnFocus);
+  // Prevent submit if email is invalid
   form.addEventListener('submit', handleSubmit);
-
-})();
-
+}
+formValidation();
 
 
 const executeEvent = () => {
