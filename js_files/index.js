@@ -223,40 +223,37 @@ const DOM = (() => {
 const formValidation = () => {
   // Email lowercase sensitive validation
   const email = document.getElementById('visitors-email');
-  const form = document.getElementById('contact-form');  
+  const form = document.getElementById('contact-form');
 
-  function showMessage(text, className){
+  function showMessage(text, className) {
     const message = DOM.createElement('small', 'email-check-message');
     message.classList.add(className);
     message.textContent = text;
     const submitBtn = document.querySelector('.btn-form-submit');
-    form.insertBefore( message, submitBtn);
+    form.insertBefore(message, submitBtn);
   }
 
-  function validateEmail(){    
-    const emailValue = email.value.trim();    
-    const lowerCaseEmail = emailValue.toLowerCase();   
+  function validateEmail() {
+    const emailValue = email.value.trim();
+    const lowerCaseEmail = emailValue.toLowerCase();
 
-      if (emailValue !== lowerCaseEmail) {
-        showMessage('Email should be lowercase all through', 'invalid-email');
-        return false;
-      }else {
-        showMessage("Valid Email", 'valid-email');
-        return true;
-      }     
+    if (emailValue !== lowerCaseEmail) {
+      showMessage('Email should be lowercase all through', 'invalid-email');
+      return false;
+    }
+    return true;
   }
 
-  function removeMessageOnFocus(){
+  function removeMessageOnFocus() {
     const message = document.querySelector('.email-check-message');
-    console.log(message)
-    if(message){
+    if (message) {
       message.remove();
-    }     
+    }
   }
 
-  function handleSubmit(e){
+  function handleSubmit(e) {
     e.preventDefault();
-    if(validateEmail()){
+    if (validateEmail()) {
       form.submit();
     }
   }
@@ -267,9 +264,8 @@ const formValidation = () => {
   email.addEventListener('focus', removeMessageOnFocus);
   // Prevent submit if email is invalid
   form.addEventListener('submit', handleSubmit);
-}
+};
 formValidation();
-
 
 const executeEvent = () => {
   // Add event listener to the hamburger btn
