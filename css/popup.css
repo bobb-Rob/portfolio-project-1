@@ -36,7 +36,7 @@
   padding: 0.5rem;
   border: 1px solid #979493;
   color: var(--lightdark);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 13px;
@@ -54,7 +54,7 @@
 }
 
 .popup-btn-wrapper > p {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -63,7 +63,7 @@
 }
 
 .popup-btn {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
@@ -82,7 +82,29 @@
 }
 
 .popup-btn > a > img:hover {
-  filter: invert(42%) sepia(65%) saturate(2553%) hue-rotate(2deg) brightness(106%) contrast(102%);
+  filter:
+    invert(42%) sepia(65%) saturate(2553%) hue-rotate(2deg)
+    brightness(106%) contrast(102%);
+}
+
+/* Email Validation */
+
+.email-check-message {
+  position: absolute;
+  top: 69%;
+  padding-left: 12px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.valid-email {
+  color: rgb(7, 175, 47);
+}
+
+.invalid-email {
+  color: var(--orange);
 }
 
 /* Mobile view pop-up */
@@ -94,7 +116,7 @@
   }
 
   .popup-container h2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 700;
     padding-bottom: 35px;
   }
@@ -113,7 +135,7 @@
   }
 
   .popup-container > h2 {
-    font-family: 'Crete Round', serif;
+    font-family: "Crete Round", serif;
     font-weight: 400;
   }
 
@@ -132,7 +154,7 @@
   .popup-btn {
     margin: 1rem 0.625rem 0 0;
     display: inline-block;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 17px;

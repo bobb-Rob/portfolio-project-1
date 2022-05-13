@@ -220,6 +220,53 @@ const DOM = (() => {
   };
 })();
 
+const formValidation = () => {
+  // Email lowercase sensitive validation
+  const email = document.getElementById('visitors-email');
+  const form = document.getElementById('contact-form');
+
+  function showMessage(text, className) {
+    const message = DOM.createElement('small', 'email-check-message');
+    message.classList.add(className);
+    message.textContent = text;
+    const submitBtn = document.querySelector('.btn-form-submit');
+    form.insertBefore(message, submitBtn);
+  }
+
+  function validateEmail() {
+    const emailValue = email.value.trim();
+    const lowerCaseEmail = emailValue.toLowerCase();
+
+    if (emailValue !== lowerCaseEmail) {
+      showMessage('Email should be lowercase all through', 'invalid-email');
+      return false;
+    }
+    return true;
+  }
+
+  function removeMessageOnFocus() {
+    const message = document.querySelector('.email-check-message');
+    if (message) {
+      message.remove();
+    }
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (validateEmail()) {
+      form.submit();
+    }
+  }
+
+  // Validate email once email field losses focus
+  email.addEventListener('change', validateEmail);
+  // Remove message once email field regains focus
+  email.addEventListener('focus', removeMessageOnFocus);
+  // Prevent submit if email is invalid
+  form.addEventListener('submit', handleSubmit);
+};
+formValidation();
+
 const executeEvent = () => {
   // Add event listener to the hamburger btn
   DOM.hamburgerBtn.addEventListener('click', () => {
