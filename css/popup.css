@@ -91,8 +91,9 @@
 
 .email-check-message {
   position: absolute;
-  top: 69%;
-  padding-left: 12px;
+
+  /* top: 69%;
+  padding-left: 12px; */
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -123,6 +124,11 @@
 
   .popup-img-p {
     flex-direction: column;
+  }
+
+  .email-check-message {
+    top: 68%;
+    padding-left: 12px;
   }
 }
 
@@ -160,6 +166,11 @@
     font-size: 17px;
     line-height: 24px;
     color: var(--white);
+  }
+
+  .email-check-message {
+    top: 69%;
+    padding-left: 12px;
   }
 }
 

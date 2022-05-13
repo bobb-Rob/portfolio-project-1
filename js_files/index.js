@@ -107,6 +107,28 @@ const projects2 = [{
   id: 'x1',
 }];
 
+const setLocalStore = (() => {
+  function useStorageInfo() {
+    const currentInfo = JSON.parse(localStorage.getItem('contactInfo'));
+
+    document.getElementById('visitors-name').value = currentInfo.fullName;
+    document.getElementById('visitors-email').value = currentInfo.email;
+    document.getElementById('contact-text-area').value = currentInfo.message;
+  }
+
+  function setStorage() {
+    const contactInfo = {
+      fullName: document.getElementById('visitors-name').value,
+      email: document.getElementById('visitors-email').value,
+      message: document.getElementById('contact-text-area').value,
+    };
+    localStorage.setItem('contactInfo', JSON.stringify(contactInfo));
+    useStorageInfo();
+  }
+
+  return { setStorage, useStorageInfo };
+})();
+
 const DOM = (() => {
   // create Element function
   function createElement(elem, className = null) {
@@ -226,8 +248,14 @@ const formValidation = () => {
   const form = document.getElementById('contact-form');
 
   function showMessage(text, className) {
-    const message = DOM.createElement('small', 'email-check-message');
-    message.classList.add(className);
+    let message;
+    if (!document.querySelector('.email-check-message')) {
+      message = DOM.createElement('small', 'email-check-message');
+      message.classList.add(className);
+    } else {
+      message = document.querySelector('.email-check-message');
+      message.classList.replace(className, className);
+    }
     message.textContent = text;
     const submitBtn = document.querySelector('.btn-form-submit');
     form.insertBefore(message, submitBtn);
@@ -328,5 +356,17 @@ const executeEvent = () => {
       document.querySelector('.project-modal').remove();
     });
   });
+
+  // LocalStorage Event
+  window.onload = setLocalStore.useStorageInfo;
+  const fullName = document.getElementById('visitors-name');
+  const emailId = document.getElementById('visitors-email');
+  const message = document.getElementById('contact-text-area');
+
+  [fullName, emailId, message].forEach((node) => {
+    node.onkeydown = setLocalStore.setStorage;
+    node.onkeyup = setLocalStore.setStorage;
+  });
 };
+
 executeEvent();

@@ -422,6 +422,7 @@
   padding: 0;
   margin: 58px 0 0 0;
   min-width: 327px;
+  position: relative;
 }
 
 .text-input {
@@ -916,7 +917,6 @@
     margin: 0;
     min-width: 327px;
     flex-grow: 1;
-    position: relative;
   }
 
   .first-name {
