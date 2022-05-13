@@ -220,6 +220,82 @@ const DOM = (() => {
   };
 })();
 
+const formValidation = (() => {
+  
+//   const email = document.querySelector('#mail');
+// const form = document.querySelector('form')
+// form.addEventListener('submit', handleSubmit);
+// let errorMsg = document.querySelector('#message');
+ 
+// function handleSubmit(e){
+//   e.preventDefault();
+//   let regex = /[A-Z]/ig;
+//   let userEmail = email.value;
+//   console.log(userEmail);
+//   userEmail.match(regex) ? console.log('error') : ('success');
+//   errorMsg.innerHTML = 'User email should be in lower case all through'
+//   errorMsg.classList.add('error');
+// }
+
+// const form = document.getElementById('form');
+// const mail = document.getElementById('email');
+// const message = document.querySelector('small');
+
+// function showError() {
+//   message.innerText = 'All letters in email must be in lowercase';
+//   message.classList.add('error');
+// }
+// function validateEmail(email) {
+//   const emailVal = email.value.trim();
+//   const lowerCaseWords = emailVal.toLowerCase();
+//   if (emailVal !== lowerCaseWords) {
+//     return showError();
+//   }
+//   message.innerText = '';
+//   return true;
+// }
+
+// form.addEventListener('submit', (e) => {
+//   e.preventDefault();
+//   if (validateEmail(mail)) {
+//     form.submit();
+//   }
+// });
+
+
+
+
+  const email = document.getElementById('visitors-email');
+  const form = document.getElementById('contact-form');  
+
+  function showMessage(message){
+    const message = createElement('small');
+    
+  }
+
+  function validateEmail(email){
+    const emailValue = email.value.trim();
+    const lowerCaseEmail = emailValue.toLowerCase();
+      if (emailValue !== lowerCaseEmail) {
+        return showMessage('Email should be lower case all through');
+      }
+     showMessage("Valid Email");
+      return true;
+  }
+  
+  function handleSubmit(e){
+    e.preventDefault();
+    if(validateEmail(email)){
+      form.submit();
+    }
+  }
+
+  form.addEventListener('submit', handleSubmit);
+
+})();
+
+
+
 const executeEvent = () => {
   // Add event listener to the hamburger btn
   DOM.hamburgerBtn.addEventListener('click', () => {

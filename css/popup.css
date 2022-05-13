@@ -85,6 +85,9 @@
   filter: invert(42%) sepia(65%) saturate(2553%) hue-rotate(2deg) brightness(106%) contrast(102%);
 }
 
+/* Email Validation */
+
+
 /* Mobile view pop-up */
 @media screen and (max-width: 768px) {
   .popup-container {
