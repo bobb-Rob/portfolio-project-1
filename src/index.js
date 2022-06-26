@@ -1,3 +1,6 @@
+import './css/style.css';
+
+
 const projects = [
   {
     name: ' ',
