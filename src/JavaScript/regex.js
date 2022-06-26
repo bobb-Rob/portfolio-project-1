@@ -13,8 +13,8 @@
 //   const content = createElement("div", "artistBioContent");
 
 //   const imageHolder = createElement('div', 'artist-content-image');
-//   const contentImg = createElement('img'); 
-//   const [image1, image2 ] = image;   
+//   const contentImg = createElement('img');
+//   const [image1, image2 ] = image;
 //   contentImg.src = image2;
 //   contentImg.alt = name;
 //   imageHolder.appendChild(contentImg);

@@ -1,7 +1,5 @@
-
-
-import { projects, projects2 } from './JavaScript/projects';
-import displayImages from './JavaScript/images';
+import { projects, projects2 } from './JavaScript/projects.js';
+import displayImages from './JavaScript/images.js';
 import './css/style.css';
 
 displayImages();
@@ -68,8 +66,8 @@ const DOM = (() => {
     const techListItem3 = createElement('li');
     techListItem3.textContent = `${project.technologies[2]}`;
     const techUL = createElement('ul', 'description-tags');
-    techUL.append(techListItem1,techListItem2,techListItem3)
-    
+    techUL.append(techListItem1, techListItem2, techListItem3);
+
     const cardDescription = createElement('div', 'card-description');
     cardDescription.appendChild(projectName);
     cardDescription.appendChild(projectDescription);

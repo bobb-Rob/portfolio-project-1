@@ -7,29 +7,21 @@ import fingersIcon from '../icons/Enabledtwo-fingers-icon.png';
 import twitterIcon from '../icons/Disabledtwitter-icon.png';
 import mIcon from '../icons/DisabledM-icon.png';
 
+const displayImages = () => {
+  const hamburgerEl = document.querySelector('.hamburger-btn > img');
+  hamburgerEl.src = hamburgerIcon;
+  // Envelope Icon insertion
+  const envelopEl = document.querySelector('.envelope-icon');
+  envelopEl.src = envelopeIcon;
 
-const displayImages = () => {  
-    const hamburgerEl = document.querySelector('.hamburger-btn > img');
-    hamburgerEl.src = hamburgerIcon; 
-    // Envelope Icon insertion
-    const envelopEl = document.querySelector('.envelope-icon');
-    envelopEl.src = envelopeIcon;
-
-    // insert social media icons in headline
-    const allheadlineIcons = document.querySelectorAll('.headline-social-media img');   
-    const [img1, img2,img3,img4, img5 ] = allheadlineIcons;
-    img1.src = githubIcon;
-    img2.src = LinkedInIcon;
-    img3.src = fingersIcon;
-    img4.src = twitterIcon;
-    img5.src = mIcon;
-
-
-
-    
-
-   
-}
-
+  // insert social media icons in headline
+  const allheadlineIcons = document.querySelectorAll('.headline-social-media img');
+  const [img1, img2, img3, img4, img5] = allheadlineIcons;
+  img1.src = githubIcon;
+  img2.src = LinkedInIcon;
+  img3.src = fingersIcon;
+  img4.src = twitterIcon;
+  img5.src = mIcon;
+};
 
 export default displayImages;
