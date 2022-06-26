@@ -14,6 +14,7 @@
   --orange: #ff6b00;
   --btn-disabledBGcolor: #f4f1f0;
   --hawkesBlue: #dfe1e6;
+  scroll-behavior: smooth;
 }
 
 #main-content {
@@ -209,6 +210,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 369px;
+  box-shadow: 1px 1px 8px -2px #262626;
 }
 
 .card-description {
@@ -848,6 +850,7 @@
     height: 100%;
     width: 100%;
     object-fit: contain;
+    box-shadow: 1px 1px 8px -2px rgb(95, 92, 92);
   }
 
   .first-card {

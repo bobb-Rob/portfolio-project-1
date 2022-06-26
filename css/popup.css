@@ -144,6 +144,9 @@
 
   .popup-img-p > img {
     flex: 2 1 auto;
+    width: 60%;
+    object-fit: cover;
+    box-shadow: 1px 1px 5px -1px rgb(70, 72, 70);
   }
 
   .popup-btn-wrapper {
