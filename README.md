@@ -1,8 +1,9 @@
 # Portfolio Project
 
-> This my Portfolio project to show case my web development skills. The development approach is mobile first.
+> This my personal Portfolio to show the various projects that I have worked on.
 
-Below is the link to view the portfolio online
+## Demo Link
+> Below is the link to view the portfolio online
 
 > [My Portfolio](https://bobb-rob.github.io/portfolio-project-1/)
 
@@ -11,51 +12,41 @@ Below is the link to view the portfolio online
 - HTML
 - CSS
 - Javascript
+- Webpack
 
-## Getting Started
+## Getting Started 🙌
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+```
+  node js
+  npm
 
-> You will need the following on you machine to reproduce this project
-
-- Code editor preferebly Visual Studio Code (VScode).
-- Basic understanding of HTML and CSS languages
-- Basic usage of HTML and CSS linters
-
+```
 ### Setup
+Clone the repository and change the directory to portfolio
 
-> To clone this repository, please follow the steps below:
+``` 
+  `$ git clone https://github.com/bobb-Rob/portfolio-project-1.git`
 
-#### **Clone Git Repository In GitHub**
+  `$ cd portfolio-project-1`
 
-- In the File menu, click Clone Repository.
-- Click the tab that corresponds to the location of the repository you want to clone. ...
-- Choose the repository you want to clone from the list.
-- Click Choose... and navigate to a local path where you want to clone the repository.
-- Click Clone.
-
-or
-
-#### **Clone Git Repository In Visual Studio Code**
-
-- Open VSCode and select a folder where to download the Git project to (Ctrl + K wait a second Ctrl + O):
-
-  > Top Menu -> Files -> Open Folder...
-
-- Start the terminal (Ctrl + `):
-
-  > Top Menu -> View-> Terminal
-
-- Execute the git clone command in the terminal:
-  > PS C:\> git clone https://github.com/path/to/repo.git
+```
 
 ### Install
+Install all project dependencies by running the command below
+ 
+``` 
+ ` $ npm install`
+```
+### Usage
 
-- install VScode if you do not already have it.
-- install stylelint. Follow the Docs [here](https://stylelint.io/user-guide/get-started)
-- install webHint. Follow the Docs [here](https://webhint.io/docs/user-guide/#install-webhint)
+Run
+``` 
+  `$ npm start or deploy the index.html from the build folder 
+```
+
 
 ## Author(s)
 
