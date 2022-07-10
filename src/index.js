@@ -8,7 +8,6 @@ displayImages();
 
 DOM.displayProjects(projects);
 
-
 const formValidation = () => {
   // Email lowercase sensitive validation
   const email = document.getElementById('visitors-email');
