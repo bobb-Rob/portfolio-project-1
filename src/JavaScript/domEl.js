@@ -30,6 +30,7 @@ const DOM = (() => {
     listItem.style.background = images.mobile;
     listItem.id = id;
 
+
     const projectName = createElement('h3');
     projectName.textContent = `${name}`;
 
@@ -121,10 +122,12 @@ const DOM = (() => {
     return projectModal;
   };
 
+  
   // elements
   const hamburgerBtn = document.querySelector('.hamburger-btn'); // Hamburger
   const navLinksWrapper = document.getElementById('nav-links'); // Menu link wrapper
   const projectBtns = document.querySelectorAll('.btn-card'); // See project btns
+  const projectInnerCards = document.querySelectorAll('.project-card > div'); // See project cards
   const workSection = document.getElementById('recent-works'); // portfolio Work section
 
   return {
@@ -137,6 +140,7 @@ const DOM = (() => {
     navLinksWrapper,
     cardContainer,
     projectBtns,
+    projectInnerCards,
     workSection,
   };
 })();

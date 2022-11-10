@@ -3,10 +3,34 @@ import DOM from './JavaScript/domEl.js';
 import setLocalStore from './JavaScript/localStorage.js';
 import displayImages from './JavaScript/images.js';
 import './css/style.css';
+import './css/projects.css';
 
 displayImages();
 
-DOM.displayProjects(projects);
+// DOM.displayProjects(projects);
+function cardOnHover() {
+  const cardArr = Array.from(DOM.projectInnerCards);
+  // project btn
+
+  cardArr.forEach((card) => {
+    card.addEventListener('mouseenter', (e) => {      
+      // card.parentElement.style.transform = 'scale(1.1)';
+      const button = e.target.nextElementSibling;
+      button.style.height = '48px';
+      button.style.padding = '12px';
+    });
+    card.addEventListener('mouseleave', (e) => {
+      // card.parentElement.style.transform = 'scale(1)';
+      const button = e.target.nextElementSibling;
+      setTimeout(() => {
+        button.style.height = '0';
+        button.style.padding = '0';
+      }, 1500);
+    });
+  });
+}
+
+cardOnHover();
 
 const formValidation = () => {
   // Email lowercase sensitive validation

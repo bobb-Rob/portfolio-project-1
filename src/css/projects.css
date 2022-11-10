@@ -1,0 +1,161 @@
+.recent-works {
+  display: flex;
+  flex-direction: column;
+  padding: 120px 24px; 
+}
+
+.recent-works-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;  
+}
+
+.recent-works-header > h2 {
+  font-family: "Crete Round", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 52px;  
+  height: 83px;
+  color: #fff5e1;
+  color: var(--deepDark);
+}
+
+.thin-line {
+  border: 1px solid #5A594D;
+  height: 0;
+  width: 90%;
+  margin: 0 0 80px 0;
+}
+
+.my-works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.featured {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+  border: 1px solid #dddcd9;
+  border-radius: 10px;
+}
+
+.featured .first-card-img-desktop {
+  display: none;
+}
+
+.featured .first-card-img-mobile {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.featured .first-card-image-container { 
+  width: 100%;
+}
+
+.first-card {
+  font-family: 'inter', serif;
+  margin-top: 15px; 
+}
+
+.first-card > span { 
+  font-family: 'crete round', serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--orange);
+}
+
+.first-card > h3 {
+  font-family: 'crete round', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 25px;
+  color: var(--blue-like);
+  margin: 10px 0 30px;
+}
+
+.first-card > p {
+  font-family: 'inter', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--blue-like);
+  margin: 0 0 30px;
+}
+
+.first-card > ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.first-card > ul > li {
+  font-family: 'inter', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--blue-like);
+  margin: 0 10px 0.6rem 0;
+  border: 1px solid var(--hawkesBlue);
+  padding: 0.5rem;
+  border-radius: 10px;  
+}
+
+.project-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(309px, 1fr));
+  column-gap: 24px;
+  row-gap: 24px;
+  width: 100%;
+}
+
+.project-card {
+  display: flex;  
+  height: 440px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #dddcd9;
+  margin: 1.5rem 0;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px -5px #262626;  
+  position: relative;
+}
+
+.project-card > div {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(20, 19, 17, 0.8);
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.project-card > div:hover {
+  opacity: 0;
+}
+
+.btn-card {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  height: 0%;
+  padding: 0;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}

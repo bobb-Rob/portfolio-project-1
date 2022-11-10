@@ -2,9 +2,9 @@ const setLocalStore = (() => {
   function useStorageInfo() {
     const currentInfo = JSON.parse(localStorage.getItem('contactInfo'));
 
-    document.getElementById('visitors-name').value = currentInfo.fullName;
-    document.getElementById('visitors-email').value = currentInfo.email;
-    document.getElementById('contact-text-area').value = currentInfo.message;
+    document.getElementById('visitors-name').value = currentInfo?.fullName;
+    document.getElementById('visitors-email').value = currentInfo?.email;
+    document.getElementById('contact-text-area').value = currentInfo?.message;
   }
 
   function setStorage() {
