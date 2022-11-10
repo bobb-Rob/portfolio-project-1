@@ -2,6 +2,10 @@ import mobileGlobalDrums from '../myworkImages/mobileGlobalDrummers.png';
 import desktopGlobalDrums from '../myworkImages/desktopGlobalDrummers.png';
 import desktopEcommerce from '../myworkImages/E-commerce product page.png';
 import mobileEcommerce from '../myworkImages/mobileE-commerce-product-page.png';
+import shortlyMobile from '../myworkImages/Shortly-mobile.png';
+import shortlyDesktop from '../myworkImages/Shortly-desktop.png';
+import cryptoHubMobile from '../myworkImages/Crypto-hub-mobile.png';
+import cryptoHubDesktop from '../myworkImages/Crypto-hub-desktop.png';
 
 const projects = [
   {
@@ -20,29 +24,29 @@ const projects = [
     id: '1',
   },
   {
-    name: 'Website Portfolio',
+    name: 'Shortly Landing Page',
     description:
-        "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard",
+        "Have you ever needed to shorten a very very long URL?, this app can help you do that quickly. It was built with vanilla JavaScript. Credit to Front End Mentors who put up this challenge.",
     images: {
-      mobile: mobileGlobalDrums,
-      desktop: desktopGlobalDrums,
+      mobile: shortlyMobile,
+      desktop: shortlyDesktop,
     },
     technologies: ['Html', 'CSS', 'JavaScript'],
-    liveLink: 'https://bobb-rob.github.io/portfolio-project-1/',
-    sourceFile: 'https://github.com/bobb-rob/portfolio-project-1',
+    liveLink: 'https://bobb-rob.github.io/url-shortening-api-master/',
+    sourceFile: 'https://github.com/bobb-Rob/url-shortening-api-master',
     id: '2',
   },
   {
-    name: 'Profesional Art Printing Data',
+    name: 'Crypto-hub',
     description:
-        "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard",
+        "Crypto-Hub is a web application that provides detailed information about the top 100 most used cryptocurrencies in the worlds",
     images: {
-      mobile: mobileGlobalDrums,
-      desktop: desktopGlobalDrums,
+      mobile: cryptoHubMobile,
+      desktop: cryptoHubDesktop,
     },
-    technologies: ['Html', 'CSS', 'JavaScript'],
-    liveLink: 'https://bobb-rob.github.io/portfolio-project-1/',
-    sourceFile: 'https://github.com/bobb-rob/portfolio-project-1',
+    technologies: ['React', 'Redux', 'Axios', 'CSS'],
+    liveLink: 'https://crypto-hub-247.netlify.app/',
+    sourceFile: 'https://github.com/bobb-Rob/Crypto-Hub',
     id: '3',
   },
   {
