@@ -138,13 +138,14 @@ const DOM = (() => {
   const hamburgerBtn = document.querySelector('.hamburger-btn'); // Hamburger
   const navLinksWrapper = document.getElementById('nav-links'); // Menu link wrapper
   const projectBtns = document.querySelectorAll('.btn-card'); // See project btns
-  const projectInnerCards = document.querySelectorAll('.project-card > div'); // See project cards
+  const projectInnerCards = document.querySelectorAll('.card-description'); // See project cards
   const workSection = document.getElementById('recent-works'); // portfolio Work section
 
   return {
     createElement,
     createCloseIcon,
     createPopupWindow,
+    createProjectCard,
     displayProjects,
     hamburgerBtn,
     navLinksWrapper,

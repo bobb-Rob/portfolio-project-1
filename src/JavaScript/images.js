@@ -37,7 +37,7 @@ const productImages = () => {
   featuredProduct1El.src = featuredProduct1;
 
   // const projectImages = document.querySelectorAll('.project-card');
-  // const [img1, img2, img3, img4] = [...projectImages];
+  // const [img1, img2] = [...projectImages];
   // img1.style.backgroundImage = `url(${EcommerceProductImage})`;
   // img2.style.backgroundImage = `url(${globalDrumFestivalMobile})`;
 };

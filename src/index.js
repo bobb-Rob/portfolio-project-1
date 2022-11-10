@@ -5,16 +5,21 @@ import displayImages from './JavaScript/images.js';
 import './css/style.css';
 import './css/projects.css';
 
-DOM.displayProjects(projects);
-displayImages();
+const displayProjects = (projects) => {
+  console.log('project injection');
+  projects.map((project) =>
+    DOM.cardContainer.appendChild(DOM.createProjectCard(project))
+  );
+};
 
-function cardOnHover() {
-  console.log('card hover effect');
-  const cardArr = Array.from(DOM.projectInnerCards);
+function cardOnHover() { 
+  const cardArr = Array.from(document.querySelectorAll('.card-description'));
+  console.log(cardArr);
   // project btn
 
   cardArr.forEach((card) => {
-    card.addEventListener('mouseenter', (e) => {      
+    card.addEventListener('mouseenter', (e) => {
+      console.log('card hover effect');    
       // card.parentElement.style.transform = 'scale(1.1)';
       const button = e.target.nextElementSibling;
       // console.log(button);
@@ -32,8 +37,6 @@ function cardOnHover() {
     });
   });
 }
-
-cardOnHover();
 
 const formValidation = () => {
   // Email lowercase sensitive validation
@@ -86,7 +89,6 @@ const formValidation = () => {
   // Prevent submit if email is invalid
   form.addEventListener('submit', handleSubmit);
 };
-formValidation();
 
 const executeEvent = () => {
   // Add event listener to the hamburger btn
@@ -162,4 +164,9 @@ const executeEvent = () => {
   });
 };
 
+
+displayProjects(projects);
+displayImages();
+formValidation();
+cardOnHover();
 executeEvent();
