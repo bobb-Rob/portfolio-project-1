@@ -1,14 +1,15 @@
-import { projects, projects2 } from './JavaScript/projects.js';
+import { projects } from './JavaScript/projects.js';
 import DOM from './JavaScript/domEl.js';
 import setLocalStore from './JavaScript/localStorage.js';
 import displayImages from './JavaScript/images.js';
 import './css/style.css';
 import './css/projects.css';
 
+DOM.displayProjects(projects);
 displayImages();
 
-// DOM.displayProjects(projects);
 function cardOnHover() {
+  console.log('card hover effect');
   const cardArr = Array.from(DOM.projectInnerCards);
   // project btn
 
@@ -16,8 +17,10 @@ function cardOnHover() {
     card.addEventListener('mouseenter', (e) => {      
       // card.parentElement.style.transform = 'scale(1.1)';
       const button = e.target.nextElementSibling;
+      // console.log(button);
       button.style.height = '48px';
       button.style.padding = '12px';
+      console.log(button);
     });
     card.addEventListener('mouseleave', (e) => {
       // card.parentElement.style.transform = 'scale(1)';
@@ -74,7 +77,7 @@ const formValidation = () => {
     if (validateEmail()) {
       form.submit();
     }
-  }
+  };
 
   // Validate email once email field losses focus
   email.addEventListener('change', validateEmail);
@@ -113,32 +116,32 @@ const executeEvent = () => {
     });
   });
 
-  const cardBtnArr = Array.from(DOM.projectBtns);
-  cardBtnArr.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      // Filter the project by id
-      const project = projects.filter(
-        (proj) => proj.id === e.target.parentElement.id,
-      );
-      DOM.workSection.appendChild(DOM.createPopupWindow(project[0]));
-      //  Lister for click on close icon in popup container
-      DOM.createCloseIcon(document.querySelector('.popup-container'), 'span');
-      const popupCloseIcon = document.querySelector('span.close-icon-wrapper');
-      popupCloseIcon.addEventListener('click', () => {
-        document.querySelector('.project-modal').remove();
-      });
-      //  Listen for click outside popup container
-      window.addEventListener('click', (e) => {
-        if (e.target.classList.contains('project-modal')) {
-          document.querySelector('.project-modal').remove();
-        }
-      });
-    });
-  });
+  // const cardBtnArr = Array.from(DOM.projectBtns);
+  // cardBtnArr.forEach((btn) => {
+  //   btn.addEventListener('click', (e) => {
+  //     // Filter the project by id
+  //     const project = projects.filter(
+  //       (proj) => proj.id === e.target.parentElement.id,
+  //     );
+  //     DOM.workSection.appendChild(DOM.createPopupWindow(project[0]));
+  //     //  Lister for click on close icon in popup container
+  //     DOM.createCloseIcon(document.querySelector('.popup-container'), 'span');
+  //     const popupCloseIcon = document.querySelector('span.close-icon-wrapper');
+  //     popupCloseIcon.addEventListener('click', () => {
+  //       document.querySelector('.project-modal').remove();
+  //     });
+  //     //  Listen for click outside popup container
+  //     window.addEventListener('click', (e) => {
+  //       if (e.target.classList.contains('project-modal')) {
+  //         document.querySelector('.project-modal').remove();
+  //       }
+  //     });
+  //   });
+  // });
 
   const firstCardButton = document.querySelector('.btn-feature');
   firstCardButton.addEventListener('click', () => {
-    DOM.workSection.appendChild(DOM.createPopupWindow(projects2[0]));
+    DOM.workSection.appendChild(DOM.createPopupWindow(projects[0]));
     //  Lister for click on close icon in popup container
     DOM.createCloseIcon(document.querySelector('.popup-container'), 'span');
     const popupCloseIcon = document.querySelector('span.close-icon-wrapper');

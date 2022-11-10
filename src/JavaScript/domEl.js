@@ -21,15 +21,18 @@ const DOM = (() => {
   };
 
   // Projects card display function
-  const cardContainer = document.getElementById('card-container');
+  const cardContainer = document.querySelector('.project-card-container');
 
   const createProjectCard = ({
-    name, description, images, technologies, id,
+    name,
+    description,
+    images,
+    technologies,
+    id,
   }) => {
     const listItem = createElement('li', 'project-card');
-    listItem.style.background = images.mobile;
+    listItem.style.backgroundImage = `url(${images.mobile})`;
     listItem.id = id;
-
 
     const projectName = createElement('h3');
     projectName.textContent = `${name}`;
@@ -49,46 +52,55 @@ const DOM = (() => {
     const cardDescription = createElement('div', 'card-description');
     cardDescription.append(projectName, projectDescription, techUL);
 
-    const projectBtn = createElement('button', 'btn-card');
-    projectBtn.classList.add('btn');
+    const projectBtn = createElement('button', 'btn');
+    projectBtn.classList.add('btn-card');
     projectBtn.type = 'button';
     projectBtn.textContent = 'See Project';
     listItem.append(cardDescription, projectBtn);
+    console.log(listItem);
     return listItem;
   };
 
-  const insertFirstCard = ({
-    name, description, images, technologies,
-  }) => {
-    const firstCardEl = `
-        <div class="featured">
-              <div class="first-card-image-container">
-                <img class="first-card-img-mobile" src=${images.mobile} alt="project image" />
-                <img class="first-card-img-desktop" src=${images.desktop} alt="project image" />
-              </div>
-              <div class="first-card" id="7">
-                <h3>${name}</h3>
-                <p>
-                  ${description}
-                </p>
-                <ul>
-                ${technologies.map((tech) => `<li  class="tags">${tech}</li>`)}                  
-                </ul>
-                <button type="button" class="btn btn-feature">See Project</button>
-              </div>
-            </div>`;
-    const myWork = document.querySelector('.my-works');
-    myWork.insertAdjacentHTML('afterbegin', firstCardEl);
-  };
+  // const insertFirstCard = ({
+  //   name, description, images, technologies,
+  // }) => {
+  //   const firstCardEl = `
+  //       <div class="featured">
+  //             <div class="first-card-image-container">
+  //               <img class="first-card-img-mobile" src=${images.mobile} alt="project image" />
+  //               <img class="first-card-img-desktop" src=${images.desktop} alt="project image" />
+  //             </div>
+  //             <div class="first-card" id="7">
+  //               <h3>${name}</h3>
+  //               <p>
+  //                 ${description}
+  //               </p>
+  //               <ul>
+  //               ${technologies.map((tech) => `<li  class="tags">${tech}</li>`)}
+  //               </ul>
+  //               <button type="button" class="btn btn-feature">See Project</button>
+  //             </div>
+  //           </div>`;
+  //   const myWork = document.querySelector('.my-works');
+  //   myWork.insertAdjacentHTML('afterbegin', firstCardEl);
+  // };
 
   // Project card display map
   const displayProjects = (projects) => {
-    projects.map((project) => cardContainer.appendChild(createProjectCard(project)));
+    console.log('project injection');
+    projects.map((project) =>
+      cardContainer.appendChild(createProjectCard(project))
+    );
   };
 
   // Project pop up window create function
   const createPopupWindow = ({
-    name, description, images, technologies, liveLink, sourceFile,
+    name,
+    description,
+    images,
+    technologies,
+    liveLink,
+    sourceFile,
   }) => {
     const projectModal = createElement('div', 'project-modal');
     const popupContainer = createElement('div', 'popup-container');
@@ -122,7 +134,6 @@ const DOM = (() => {
     return projectModal;
   };
 
-  
   // elements
   const hamburgerBtn = document.querySelector('.hamburger-btn'); // Hamburger
   const navLinksWrapper = document.getElementById('nav-links'); // Menu link wrapper
@@ -134,7 +145,6 @@ const DOM = (() => {
     createElement,
     createCloseIcon,
     createPopupWindow,
-    insertFirstCard,
     displayProjects,
     hamburgerBtn,
     navLinksWrapper,

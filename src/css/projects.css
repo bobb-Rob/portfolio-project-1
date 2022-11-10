@@ -120,13 +120,13 @@
 
 .project-card {
   display: flex;  
-  height: 440px;
+  height: 400px;
   background-repeat: no-repeat;
   background-size: cover;
   border: 1px solid #dddcd9;
   margin: 1.5rem 0;
-  border-radius: 10px;
-  box-shadow: 1px 1px 10px -5px #262626;  
+  border-radius: 10px;  
+  box-shadow: 0 10px 30px -15px #000000;  
   position: relative;
 }
 
@@ -153,9 +153,10 @@
   line-height: 24px;
   color: #fff;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   height: 0%;
   padding: 0;
   overflow: hidden;
   transition: 0.5s ease-in-out;
+  border-radius: 0 0 10px 10px;
 }

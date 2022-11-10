@@ -36,10 +36,10 @@ const productImages = () => {
   const featuredProduct1El = document.querySelector('.first-card-img-mobile');
   featuredProduct1El.src = featuredProduct1;
 
-  const projectImages = document.querySelectorAll('.project-card');
-  const [img1, img2, img3, img4] = [...projectImages];
-  img1.style.backgroundImage = `url(${EcommerceProductImage})`;
-  img2.style.backgroundImage = `url(${globalDrumFestivalMobile})`;
+  // const projectImages = document.querySelectorAll('.project-card');
+  // const [img1, img2, img3, img4] = [...projectImages];
+  // img1.style.backgroundImage = `url(${EcommerceProductImage})`;
+  // img2.style.backgroundImage = `url(${globalDrumFestivalMobile})`;
 };
 
 

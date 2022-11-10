@@ -12,7 +12,7 @@ const projects = [
         This project was completed with JavaScript, HTML, and CSS.`,
     images: {
       mobile: mobileGlobalDrums,
-      desktop: `url(${desktopGlobalDrums})`,
+      desktop: desktopGlobalDrums,
     },
     technologies: ['Html', 'CSS', 'JavaScript'],
     liveLink: 'https://bobb-rob.github.io/Global-Drummers-Workshop/',
@@ -25,7 +25,7 @@ const projects = [
         "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard",
     images: {
       mobile: mobileGlobalDrums,
-      desktop: `url(${desktopGlobalDrums})`,
+      desktop: desktopGlobalDrums,
     },
     technologies: ['Html', 'CSS', 'JavaScript'],
     liveLink: 'https://bobb-rob.github.io/portfolio-project-1/',
@@ -38,28 +38,27 @@ const projects = [
         "A daily selection of privately personalized reads; no accounts or sign-ups required has been the industry's standard",
     images: {
       mobile: mobileGlobalDrums,
-      desktop: `url(${desktopGlobalDrums})`,
+      desktop: desktopGlobalDrums,
     },
     technologies: ['Html', 'CSS', 'JavaScript'],
     liveLink: 'https://bobb-rob.github.io/portfolio-project-1/',
     sourceFile: 'https://github.com/bobb-rob/portfolio-project-1',
     id: '3',
   },
+  {
+    name: 'E-commerce product page',
+    description:
+    `This is a responsive single page e-commerce product page, a solution to the E-commerce product page challenge on Frontend Mentor. 
+    Frontend Mentor challenges help you improve your coding skills by building realistic projects.`,
+    images: {
+      mobile: mobileEcommerce,
+      desktop: desktopEcommerce,
+    },
+    technologies: ['Html', 'CSS', 'JavaScript'],
+    liveLink: 'https://bobb-rob.github.io/ecommerce-product-page/',
+    sourceFile: 'https://github.com/bobb-Rob/ecommerce-product-page',
+    id: 'x1',
+  }
 ];
 
-const projects2 = [{
-  name: 'E-commerce product page',
-  description:
-  `This is a responsive single page e-commerce product page, a solution to the E-commerce product page challenge on Frontend Mentor. 
-  Frontend Mentor challenges help you improve your coding skills by building realistic projects.`,
-  images: {
-    mobile: mobileEcommerce,
-    desktop: `url(${desktopEcommerce})`,
-  },
-  technologies: ['Html', 'CSS', 'JavaScript'],
-  liveLink: 'https://bobb-rob.github.io/ecommerce-product-page/',
-  sourceFile: 'https://github.com/bobb-Rob/ecommerce-product-page',
-  id: 'x1',
-}];
-
-export { projects, projects2 };
+export { projects };
