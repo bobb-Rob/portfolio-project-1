@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter&family=Poppins&family=Roboto:ital,wght@0,400;0,500;0,900;1,100&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Tangerine:wght@400;700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +27,8 @@
 
 #header {
   background: var(--lightdark);
-  height: 48px;
+  height: 68px;
+  align-items: center;
   display: flex;
   justify-content: space-between;
   padding: 12px 24px 12px 24px;
@@ -50,6 +51,9 @@
   color: var(--white);
   transition-property: color;
   transition-duration: 0.5s;
+  /* font-family: 'Tangerine', cursive;
+  font-family: 'Berkshire Swash', cursive; */
+  font-family: "Crete Round", serif;
 }
 
 #logo:hover {

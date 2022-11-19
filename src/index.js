@@ -18,11 +18,9 @@ function cardOnHover() {
   // project btn
 
   cardArr.forEach((card) => {
-    card.addEventListener('mouseenter', (e) => {
-      console.log('card hover effect');    
+    card.addEventListener('mouseenter', (e) => {      
       // card.parentElement.style.transform = 'scale(1.1)';
       const button = e.target.nextElementSibling;
-      // console.log(button);
       button.style.height = '48px';
       button.style.padding = '12px';
       console.log(button);
