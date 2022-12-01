@@ -8,10 +8,8 @@ import twitterIcon from '../icons/Disabledtwitter-icon.png';
 import mIcon from '../icons/DisabledM-icon.png';
 // Featured product images
 import featuredProduct1 from '../images/mobile-first-card.svg';
-import CarsBnBProjectImage from '../images/Car-test.png';
-// Project card imports
-// import EcommerceProductImage from '../myworkImages/mobileE-commerce-product-page.png';
-// import globalDrumFestivalMobile from '../myworkImages/mobileGlobalDrummers.png';
+import CarsBnBProjectImage from '../images/Car-test-dt.png';
+
 
 const displayImages = () => {
   const hamburgerEl = document.querySelector('.hamburger-btn > img');

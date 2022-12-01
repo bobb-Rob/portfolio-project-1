@@ -7,6 +7,7 @@ import gitHubIcon from './icons/github-icon.svg';
 import newWindowIcon from './icons/new-window-icon.svg';
 import './css/style.css';
 import './css/projects.css';
+import './css/popup.css'
 
 const displayProjects = (projects) => {
   projects.map((project) => DOM.cardContainer.appendChild(DOM.createProjectCard(project)));
@@ -136,31 +137,31 @@ const executeEvents = () => {
       const workSection = document.getElementById('recent-works');
       workSection.appendChild(DOM.createPopupWindow(project));
       insertPopupIcons();
-      // //  Lister for click on close icon in popup container
-      // DOM.createCloseIcon(document.querySelector('.popup-container'), 'span');
-      // const popupCloseIcon = document.querySelector('span.close-icon-wrapper');
-      // popupCloseIcon.addEventListener('click', () => {
-      //   document.querySelector('.project-modal').remove();
-      // });
-      // //  Listen for click outside popup container
-      // window.addEventListener('click', (e) => {
-      //   if (e.target.classList.contains('project-modal')) {
-      //     document.querySelector('.project-modal').remove();
-      //   }
-      // });
+      //  Listen for click on close icon in popup container
+      DOM.createCloseIcon(document.querySelector('.popup-container'), 'span');
+      const popupCloseIcon = document.querySelector('span.close-icon-wrapper');
+      popupCloseIcon.addEventListener('click', () => {
+        document.querySelector('.project-modal').remove();
+      });
+      //  Listen for click outside popup container
+      window.addEventListener('click', (e) => {
+        if (e.target.classList.contains('project-modal')) {
+          document.querySelector('.project-modal').remove();
+        }
+      });
     });
   });
 
   const firstCardButton = document.querySelector('.btn-feature');
   firstCardButton.addEventListener('click', (e) => {
     console.log(e.target);
-    // DOM.workSection.appendChild(DOM.createPopupWindow(featuredProjects[0]));
-    //  Lister for click on close icon in popup container
-    // DOM.createCloseIcon(document.querySelector('.popup-container'), 'span');
-    // const popupCloseIcon = document.querySelector('span.close-icon-wrapper');
-    // popupCloseIcon.addEventListener('click', () => {
-    //   document.querySelector('.project-modal').remove();
-    // });
+    DOM.workSection.appendChild(DOM.createPopupWindow(featuredProjects[0]));
+    //  Listen for click on close icon in popup container
+    DOM.createCloseIcon(document.querySelector('.popup-container'), 'span');
+    const popupCloseIcon = document.querySelector('span.close-icon-wrapper');
+    popupCloseIcon.addEventListener('click', () => {
+      document.querySelector('.project-modal').remove();
+    });
   });
 
   // LocalStorage Event

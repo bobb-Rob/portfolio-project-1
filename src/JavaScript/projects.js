@@ -6,6 +6,8 @@ import shortlyMobile from '../myworkImages/Shortly-mobile.png';
 import shortlyDesktop from '../myworkImages/Shortly-desktop.png';
 import cryptoHubMobile from '../myworkImages/Crypto-hub-mobile.png';
 import cryptoHubDesktop from '../myworkImages/Crypto-hub-desktop.png';
+import CarsBnBProjectDesktopImage from '../images/Car-test-dt.png';
+import CarsBnBProjectMobileImage from '../images/Car-test-mobile.png';
 
 export const featuredProjects = [
   {
@@ -13,8 +15,8 @@ export const featuredProjects = [
     description: `Its a simple full-stack application that users can reserve 
     a session to test cars of thier choosing before the commit to buying or choose a financing package.`,
     images: {
-      mobile: mobileGlobalDrums,
-      desktop: desktopGlobalDrums,
+      mobile: CarsBnBProjectMobileImage,
+      desktop: CarsBnBProjectDesktopImage,
     },
     technologies: ['React.Js', 'Ruby on Rails', 'CSS', 'JavaScript'],
     liveLink: 'https://bobb-rob.github.io/Global-Drummers-Workshop/',
