@@ -1,29 +1,27 @@
-import { projects } from './JavaScript/projects.js';
+import projects from './JavaScript/projects.js';
+import { featuredProjects } from './JavaScript/projects.js';
 import DOM from './JavaScript/domEl.js';
 import setLocalStore from './JavaScript/localStorage.js';
 import displayImages from './JavaScript/images.js';
+import gitHubIcon from './icons/github-icon.svg';
+import newWindowIcon from './icons/new-window-icon.svg';
 import './css/style.css';
 import './css/projects.css';
 
 const displayProjects = (projects) => {
-  console.log('project injection');
-  projects.map((project) =>
-    DOM.cardContainer.appendChild(DOM.createProjectCard(project))
-  );
+  projects.map((project) => DOM.cardContainer.appendChild(DOM.createProjectCard(project)));
 };
 
-function cardOnHover() { 
+function cardOnHover() {
   const cardArr = Array.from(document.querySelectorAll('.card-description'));
-  console.log(cardArr);
   // project btn
 
   cardArr.forEach((card) => {
-    card.addEventListener('mouseenter', (e) => {      
+    card.addEventListener('mouseenter', (e) => {
       // card.parentElement.style.transform = 'scale(1.1)';
       const button = e.target.nextElementSibling;
       button.style.height = '48px';
       button.style.padding = '12px';
-      console.log(button);
     });
     card.addEventListener('mouseleave', (e) => {
       // card.parentElement.style.transform = 'scale(1)';
@@ -78,7 +76,7 @@ const formValidation = () => {
     if (validateEmail()) {
       form.submit();
     }
-  };
+  }
 
   // Validate email once email field losses focus
   email.addEventListener('change', validateEmail);
@@ -88,7 +86,7 @@ const formValidation = () => {
   form.addEventListener('submit', handleSubmit);
 };
 
-const executeEvent = () => {
+const executeEvents = () => {
   // Add event listener to the hamburger btn
   DOM.hamburgerBtn.addEventListener('click', () => {
     DOM.createCloseIcon(DOM.navLinksWrapper, 'li');
@@ -116,38 +114,53 @@ const executeEvent = () => {
     });
   });
 
-  // const cardBtnArr = Array.from(DOM.projectBtns);
-  // cardBtnArr.forEach((btn) => {
-  //   btn.addEventListener('click', (e) => {
-  //     // Filter the project by id
-  //     const project = projects.filter(
-  //       (proj) => proj.id === e.target.parentElement.id,
-  //     );
-  //     DOM.workSection.appendChild(DOM.createPopupWindow(project[0]));
-  //     //  Lister for click on close icon in popup container
-  //     DOM.createCloseIcon(document.querySelector('.popup-container'), 'span');
-  //     const popupCloseIcon = document.querySelector('span.close-icon-wrapper');
-  //     popupCloseIcon.addEventListener('click', () => {
-  //       document.querySelector('.project-modal').remove();
-  //     });
-  //     //  Listen for click outside popup container
-  //     window.addEventListener('click', (e) => {
-  //       if (e.target.classList.contains('project-modal')) {
-  //         document.querySelector('.project-modal').remove();
-  //       }
-  //     });
-  //   });
-  // });
+  // insert icons to popup window
+  const insertPopupIcons = () => {
+    const [newWindowIconImg, gitHubIconImg] = Array.from(document.querySelectorAll('.popup-btn > a > img'));
+    console.log(newWindowIconImg);
+    console.log(gitHubIconImg);
+    newWindowIconImg.src = newWindowIcon;
+    gitHubIconImg.src = gitHubIcon;
+  }
+
+  // Add event listener to project btns
+  const cardBtnArr = Array.from(document.querySelectorAll('.btn-card'));
+  cardBtnArr.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      // Filter the project by id
+      const [ project ] = projects.filter(
+        (proj) => proj.id === e.target.parentElement.id,
+      );
+      console.log(project);
+      console.log(e.target.parentElement);
+      const workSection = document.getElementById('recent-works');
+      workSection.appendChild(DOM.createPopupWindow(project));
+      insertPopupIcons();
+      // //  Lister for click on close icon in popup container
+      // DOM.createCloseIcon(document.querySelector('.popup-container'), 'span');
+      // const popupCloseIcon = document.querySelector('span.close-icon-wrapper');
+      // popupCloseIcon.addEventListener('click', () => {
+      //   document.querySelector('.project-modal').remove();
+      // });
+      // //  Listen for click outside popup container
+      // window.addEventListener('click', (e) => {
+      //   if (e.target.classList.contains('project-modal')) {
+      //     document.querySelector('.project-modal').remove();
+      //   }
+      // });
+    });
+  });
 
   const firstCardButton = document.querySelector('.btn-feature');
-  firstCardButton.addEventListener('click', () => {
-    DOM.workSection.appendChild(DOM.createPopupWindow(projects[0]));
+  firstCardButton.addEventListener('click', (e) => {
+    console.log(e.target);
+    // DOM.workSection.appendChild(DOM.createPopupWindow(featuredProjects[0]));
     //  Lister for click on close icon in popup container
-    DOM.createCloseIcon(document.querySelector('.popup-container'), 'span');
-    const popupCloseIcon = document.querySelector('span.close-icon-wrapper');
-    popupCloseIcon.addEventListener('click', () => {
-      document.querySelector('.project-modal').remove();
-    });
+    // DOM.createCloseIcon(document.querySelector('.popup-container'), 'span');
+    // const popupCloseIcon = document.querySelector('span.close-icon-wrapper');
+    // popupCloseIcon.addEventListener('click', () => {
+    //   document.querySelector('.project-modal').remove();
+    // });
   });
 
   // LocalStorage Event
@@ -162,9 +175,8 @@ const executeEvent = () => {
   });
 };
 
-
 displayProjects(projects);
 displayImages();
 formValidation();
-cardOnHover();
-executeEvent();
+// cardOnHover();
+executeEvents();

@@ -57,40 +57,12 @@ const DOM = (() => {
     projectBtn.type = 'button';
     projectBtn.textContent = 'See Project';
     listItem.append(cardDescription, projectBtn);
-    console.log(listItem);
     return listItem;
   };
 
-  // const insertFirstCard = ({
-  //   name, description, images, technologies,
-  // }) => {
-  //   const firstCardEl = `
-  //       <div class="featured">
-  //             <div class="first-card-image-container">
-  //               <img class="first-card-img-mobile" src=${images.mobile} alt="project image" />
-  //               <img class="first-card-img-desktop" src=${images.desktop} alt="project image" />
-  //             </div>
-  //             <div class="first-card" id="7">
-  //               <h3>${name}</h3>
-  //               <p>
-  //                 ${description}
-  //               </p>
-  //               <ul>
-  //               ${technologies.map((tech) => `<li  class="tags">${tech}</li>`)}
-  //               </ul>
-  //               <button type="button" class="btn btn-feature">See Project</button>
-  //             </div>
-  //           </div>`;
-  //   const myWork = document.querySelector('.my-works');
-  //   myWork.insertAdjacentHTML('afterbegin', firstCardEl);
-  // };
-
   // Project card display map
   const displayProjects = (projects) => {
-    console.log('project injection');
-    projects.map((project) =>
-      cardContainer.appendChild(createProjectCard(project))
-    );
+    projects.map((project) => cardContainer.appendChild(createProjectCard(project)));
   };
 
   // Project pop up window create function
@@ -118,12 +90,12 @@ const DOM = (() => {
                       <div class="pop-btn-wrap">
                         <button class="btn popup-btn" type="button">
                             <a href="${liveLink}">See Live
-                            <img src="./icons/new-window-icon.svg" alt="New window icon">
+                            <img src="" alt="New window icon">
                             </a>                        
                         </button>
                         <button class="btn popup-btn" type="button">
                             <a href="${sourceFile}">See Source
-                            <img src="./icons/github-icon.svg" alt="github icon">
+                            <img src="" alt="github icon">
                             </a>                        
                         </button>
                       </div>

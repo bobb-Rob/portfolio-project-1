@@ -7,13 +7,29 @@ import shortlyDesktop from '../myworkImages/Shortly-desktop.png';
 import cryptoHubMobile from '../myworkImages/Crypto-hub-mobile.png';
 import cryptoHubDesktop from '../myworkImages/Crypto-hub-desktop.png';
 
+export const featuredProjects = [
+  {
+    name: 'Cars BnB',
+    description: `Its a simple full-stack application that users can reserve 
+    a session to test cars of thier choosing before the commit to buying or choose a financing package.`,
+    images: {
+      mobile: mobileGlobalDrums,
+      desktop: desktopGlobalDrums,
+    },
+    technologies: ['React.Js', 'Ruby on Rails', 'CSS', 'JavaScript'],
+    liveLink: 'https://bobb-rob.github.io/Global-Drummers-Workshop/',
+    sourceFile: 'https://github.com/bobb-Rob/Global-Drummers-Workshop',
+    id: '1',
+  },
+]
+
 const projects = [
   {
     name: 'Global Drummers Festival Website',
     description: `Drum Festival Global conference is a yearly drummers community
        event at the global level featuring world-class drummers from more than 100 countries.
         The aim is to provide a single point of Information and registration for all participants. 
-        This project was completed with JavaScript, HTML, and CSS.`,
+        `,
     images: {
       mobile: mobileGlobalDrums,
       desktop: desktopGlobalDrums,
@@ -26,7 +42,7 @@ const projects = [
   {
     name: 'Shortly Landing Page',
     description:
-        "Have you ever needed to shorten a very very long URL?, this app can help you do that quickly. It was built with vanilla JavaScript. Credit to Front End Mentors who put up this challenge.",
+        'Have you ever needed to shorten a very very long URL?, this app can help you do that quickly. It was built with vanilla JavaScript. Credit to Front End Mentors who put up this challenge.',
     images: {
       mobile: shortlyMobile,
       desktop: shortlyDesktop,
@@ -39,7 +55,7 @@ const projects = [
   {
     name: 'Crypto-hub',
     description:
-        "Crypto-Hub is a web application that provides detailed information about the top 100 most used cryptocurrencies in the worlds",
+        'Crypto-Hub is a web application that provides detailed information about the top 100 most used cryptocurrencies in the worlds',
     images: {
       mobile: cryptoHubMobile,
       desktop: cryptoHubDesktop,
@@ -61,8 +77,8 @@ const projects = [
     technologies: ['Html', 'CSS', 'JavaScript'],
     liveLink: 'https://bobb-rob.github.io/ecommerce-product-page/',
     sourceFile: 'https://github.com/bobb-Rob/ecommerce-product-page',
-    id: 'x1',
-  }
+    id: '4',
+  },
 ];
 
-export { projects };
+export default projects;
