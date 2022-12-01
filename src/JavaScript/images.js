@@ -7,9 +7,8 @@ import fingersIcon from '../icons/Enabledtwo-fingers-icon.png';
 import twitterIcon from '../icons/Disabledtwitter-icon.png';
 import mIcon from '../icons/DisabledM-icon.png';
 // Featured product images
-import featuredProduct1 from '../images/mobile-first-card.svg';
+// import featuredProduct1 from '../images/mobile-first-card.svg';
 import CarsBnBProjectImage from '../images/Car-test-dt.png';
-
 
 const displayImages = () => {
   const hamburgerEl = document.querySelector('.hamburger-btn > img');
@@ -33,7 +32,6 @@ const displayImages = () => {
   img4.src = twitterIcon;
   img5.src = mIcon;
 
-  
   productImages();
 };
 

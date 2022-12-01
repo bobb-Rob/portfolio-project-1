@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter&family=Poppins&family=Roboto:ital,wght@0,400;0,500;0,900;1,100&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Tangerine:wght@400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +14,7 @@
   --deepDark: #1c1a19;
   --blue-like: #091e42;
   --orange: #ff6b00;
-  --faded-orange: #F9F871;
+  --faded-orange: #f9f871;
   --btn-disabledBGcolor: #f4f1f0;
   --hawkesBlue: #dfe1e6;
 
@@ -51,6 +52,7 @@
   color: var(--white);
   transition-property: color;
   transition-duration: 0.5s;
+
   /* font-family: 'Tangerine', cursive;
   font-family: 'Berkshire Swash', cursive; */
   font-family: "Crete Round", serif;
@@ -122,7 +124,8 @@
   border-radius: 20px;
   transition: background-color 1s;
 }
-/* 
+
+/*
 .featured {
   display: flex;
 }
@@ -210,7 +213,8 @@
   color: #5b5957;
   background-color: var(--btn-disabledBGcolor);
 }
-/* 
+
+/*
 .project-card {
   margin: 24px 0 0 0;
   list-style: none;
@@ -504,8 +508,6 @@
   border-radius: 5px;
 }
 
-
-
 #nav-links {
   list-style: none;
 }
@@ -605,7 +607,8 @@
     color: var(--blue-like);
     margin: 12px 0;
   } */
-/* 
+
+  /*
   #card-container {
     padding: 0 16px;
     display: grid;
@@ -781,7 +784,8 @@
     padding: 50px 0;
     display: block;
   }
-/* 
+
+  /*
   #recent-works {
     display: flex;
     flex-direction: column;

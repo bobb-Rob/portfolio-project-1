@@ -1,14 +1,14 @@
 .recent-works {
   display: flex;
   flex-direction: column;
-  padding: 120px 24px; 
+  padding: 120px 24px;
 }
 
 .recent-works-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0;  
+  padding: 0;
 }
 
 .recent-works-header > h2 {
@@ -16,14 +16,14 @@
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
-  line-height: 52px;  
+  line-height: 52px;
   height: 83px;
   color: #fff5e1;
   color: var(--deepDark);
 }
 
 .thin-line {
-  border: 1px solid #5A594D;
+  border: 1px solid #5a594d;
   height: 0;
   width: 90%;
   margin: 0 0 80px 0;
@@ -54,16 +54,16 @@
   border-radius: 10px;
 }
 
-.featured .first-card-image-container { 
+.featured .first-card-image-container {
   width: 100%;
 }
 
 .first-card {
   font-family: 'inter', serif;
-  margin-top: 15px; 
+  margin-top: 15px;
 }
 
-.first-card > span { 
+.first-card > span {
   font-family: 'crete round', serif;
   font-style: normal;
   font-weight: 400;
@@ -97,6 +97,20 @@
   flex-wrap: wrap;
 }
 
+.card-description li {
+  padding: 10px 12px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.74);
+  margin: 0 12px 0 0;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--deepDark);
+  border-radius: 5px;
+}
+
 .first-card > ul > li {
   font-family: 'inter', serif;
   font-style: normal;
@@ -107,7 +121,7 @@
   margin: 0 10px 0.6rem 0;
   border: 1px solid var(--hawkesBlue);
   padding: 0.5rem;
-  border-radius: 10px;  
+  border-radius: 10px;
 }
 
 .project-card-container {
@@ -120,14 +134,14 @@
 
 .project-card {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   height: 400px;
   background-repeat: no-repeat;
   background-size: cover;
   border: 1px solid #dddcd9;
   margin: 1.5rem 0;
-  border-radius: 10px;  
-  box-shadow: 0 10px 30px -15px #000000;  
+  border-radius: 10px;
+  box-shadow: 0 10px 30px -15px #000;
   position: relative;
 }
 
@@ -136,7 +150,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-color: rgba(3, 3, 3, 0.9); 
+  background-color: rgba(3, 3, 3, 0.9);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   transition: 0.5s ease-in-out;
@@ -155,14 +169,11 @@
   font-size: 17px;
   line-height: 24px;
   color: #fff;
-  /* position: absolute; */
   bottom: -1px;
-  /* height: 0%; */
   padding: 0;
   overflow: hidden;
   transition: 0.5s ease-in-out;
   border-radius: 0 0 10px 10px;
-  /* z-index: 10; */
 }
 
 .card-description > h3 {
@@ -192,18 +203,4 @@
   padding: 0;
   height: 40px;
   list-style: none;
-}
-
-.card-description li {
-  padding: 10px 12px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.74);
-  margin: 0 12px 0 0;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 20px;
-  color: var(--deepDark);
-  border-radius: 5px;
 }

@@ -23,7 +23,7 @@ export const featuredProjects = [
     sourceFile: 'https://github.com/bobb-Rob/Global-Drummers-Workshop',
     id: '1',
   },
-]
+];
 
 const projects = [
   {

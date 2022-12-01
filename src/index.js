@@ -1,5 +1,4 @@
-import projects from './JavaScript/projects.js';
-import { featuredProjects } from './JavaScript/projects.js';
+import projects, { featuredProjects } from './JavaScript/projects.js';
 import DOM from './JavaScript/domEl.js';
 import setLocalStore from './JavaScript/localStorage.js';
 import displayImages from './JavaScript/images.js';
@@ -7,33 +6,11 @@ import gitHubIcon from './icons/github-icon.svg';
 import newWindowIcon from './icons/new-window-icon.svg';
 import './css/style.css';
 import './css/projects.css';
-import './css/popup.css'
+import './css/popup.css';
 
 const displayProjects = (projects) => {
   projects.map((project) => DOM.cardContainer.appendChild(DOM.createProjectCard(project)));
 };
-
-function cardOnHover() {
-  const cardArr = Array.from(document.querySelectorAll('.card-description'));
-  // project btn
-
-  cardArr.forEach((card) => {
-    card.addEventListener('mouseenter', (e) => {
-      // card.parentElement.style.transform = 'scale(1.1)';
-      const button = e.target.nextElementSibling;
-      button.style.height = '48px';
-      button.style.padding = '12px';
-    });
-    card.addEventListener('mouseleave', (e) => {
-      // card.parentElement.style.transform = 'scale(1)';
-      const button = e.target.nextElementSibling;
-      setTimeout(() => {
-        button.style.height = '0';
-        button.style.padding = '0';
-      }, 1500);
-    });
-  });
-}
 
 const formValidation = () => {
   // Email lowercase sensitive validation
@@ -118,22 +95,18 @@ const executeEvents = () => {
   // insert icons to popup window
   const insertPopupIcons = () => {
     const [newWindowIconImg, gitHubIconImg] = Array.from(document.querySelectorAll('.popup-btn > a > img'));
-    console.log(newWindowIconImg);
-    console.log(gitHubIconImg);
     newWindowIconImg.src = newWindowIcon;
     gitHubIconImg.src = gitHubIcon;
-  }
+  };
 
   // Add event listener to project btns
   const cardBtnArr = Array.from(document.querySelectorAll('.btn-card'));
   cardBtnArr.forEach((btn) => {
     btn.addEventListener('click', (e) => {
       // Filter the project by id
-      const [ project ] = projects.filter(
+      const [project] = projects.filter(
         (proj) => proj.id === e.target.parentElement.id,
       );
-      console.log(project);
-      console.log(e.target.parentElement);
       const workSection = document.getElementById('recent-works');
       workSection.appendChild(DOM.createPopupWindow(project));
       insertPopupIcons();
@@ -153,8 +126,7 @@ const executeEvents = () => {
   });
 
   const firstCardButton = document.querySelector('.btn-feature');
-  firstCardButton.addEventListener('click', (e) => {
-    console.log(e.target);
+  firstCardButton.addEventListener('click', () => {
     DOM.workSection.appendChild(DOM.createPopupWindow(featuredProjects[0]));
     //  Listen for click on close icon in popup container
     DOM.createCloseIcon(document.querySelector('.popup-container'), 'span');
@@ -179,5 +151,4 @@ const executeEvents = () => {
 displayProjects(projects);
 displayImages();
 formValidation();
-// cardOnHover();
 executeEvents();
