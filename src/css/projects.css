@@ -1,0 +1,206 @@
+.recent-works {
+  display: flex;
+  flex-direction: column;
+  padding: 120px 24px;
+}
+
+.recent-works-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.recent-works-header > h2 {
+  font-family: "Crete Round", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 52px;
+  height: 83px;
+  color: #fff5e1;
+  color: var(--deepDark);
+}
+
+.thin-line {
+  border: 1px solid #5a594d;
+  height: 0;
+  width: 90%;
+  margin: 0 0 80px 0;
+}
+
+.my-works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.featured {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+  border: 1px solid #dddcd9;
+  border-radius: 10px;
+}
+
+.featured .first-card-img-desktop {
+  display: none;
+}
+
+.featured .first-card-img-mobile {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.featured .first-card-image-container {
+  width: 100%;
+}
+
+.first-card {
+  font-family: 'inter', serif;
+  margin-top: 15px;
+}
+
+.first-card > span {
+  font-family: 'crete round', serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--orange);
+}
+
+.first-card > h3 {
+  font-family: 'crete round', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 25px;
+  color: var(--blue-like);
+  margin: 10px 0 30px;
+}
+
+.first-card > p {
+  font-family: 'inter', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--blue-like);
+  margin: 0 0 30px;
+}
+
+.first-card > ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-description li {
+  padding: 10px 12px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.74);
+  margin: 0 12px 0 0;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--deepDark);
+  border-radius: 5px;
+}
+
+.first-card > ul > li {
+  font-family: 'inter', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--blue-like);
+  margin: 0 10px 0.6rem 0;
+  border: 1px solid var(--hawkesBlue);
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.project-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(319px, 1fr));
+  column-gap: 24px;
+  row-gap: 24px;
+  width: 100%;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #dddcd9;
+  margin: 1.5rem 0;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px -15px #000;
+  position: relative;
+}
+
+.project-card > .card-description {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: rgba(3, 3, 3, 0.9);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: 0.5s ease-in-out;
+  flex: 1;
+}
+
+.project-card > .card-description:hover {
+  opacity: 0;
+}
+
+.btn-card {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: #fff;
+  bottom: -1px;
+  padding: 0;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  border-radius: 0 0 10px 10px;
+}
+
+.card-description > h3 {
+  font-family: "Crete Round", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+  color: #fff;
+  height: 81px;
+}
+
+.card-description > p {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  margin: 12px 0;
+}
+
+.description-tags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  height: 40px;
+  list-style: none;
+}

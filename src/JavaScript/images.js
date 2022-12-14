@@ -6,6 +6,9 @@ import LinkedInIcon from '../icons/DisabledLinkedIn-icon.png';
 import fingersIcon from '../icons/Enabledtwo-fingers-icon.png';
 import twitterIcon from '../icons/Disabledtwitter-icon.png';
 import mIcon from '../icons/DisabledM-icon.png';
+// Featured product images
+// import featuredProduct1 from '../images/mobile-first-card.svg';
+import CarsBnBProjectImage from '../images/Car-test-dt.png';
 
 const displayImages = () => {
   const hamburgerEl = document.querySelector('.hamburger-btn > img');
@@ -14,14 +17,22 @@ const displayImages = () => {
   const envelopEl = document.querySelector('.envelope-icon');
   envelopEl.src = envelopeIcon;
 
+  // Insert featured product images
+  const productImages = () => {
+    const featuredProduct1El = document.querySelector('.first-card-img-mobile');
+    featuredProduct1El.src = CarsBnBProjectImage;
+  };
+
   // insert social media icons in headline
   const allheadlineIcons = document.querySelectorAll('.headline-social-media img');
-  const [img1, img2, img3, img4, img5] = allheadlineIcons;
+  const [img1, img2, img3, img4, img5] = [...allheadlineIcons];
   img1.src = githubIcon;
   img2.src = LinkedInIcon;
   img3.src = fingersIcon;
   img4.src = twitterIcon;
   img5.src = mIcon;
+
+  productImages();
 };
 
 export default displayImages;

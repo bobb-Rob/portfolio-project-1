@@ -1,12 +1,16 @@
-import { projects, projects2 } from './JavaScript/projects.js';
+import projects, { featuredProjects } from './JavaScript/projects.js';
 import DOM from './JavaScript/domEl.js';
 import setLocalStore from './JavaScript/localStorage.js';
 import displayImages from './JavaScript/images.js';
+import gitHubIcon from './icons/github-icon.svg';
+import newWindowIcon from './icons/new-window-icon.svg';
 import './css/style.css';
+import './css/projects.css';
+import './css/popup.css';
 
-displayImages();
-
-DOM.displayProjects(projects);
+const displayProjects = (projects) => {
+  projects.map((project) => DOM.cardContainer.appendChild(DOM.createProjectCard(project)));
+};
 
 const formValidation = () => {
   // Email lowercase sensitive validation
@@ -59,9 +63,8 @@ const formValidation = () => {
   // Prevent submit if email is invalid
   form.addEventListener('submit', handleSubmit);
 };
-formValidation();
 
-const executeEvent = () => {
+const executeEvents = () => {
   // Add event listener to the hamburger btn
   DOM.hamburgerBtn.addEventListener('click', () => {
     DOM.createCloseIcon(DOM.navLinksWrapper, 'li');
@@ -89,15 +92,25 @@ const executeEvent = () => {
     });
   });
 
-  const cardBtnArr = Array.from(DOM.projectBtns);
+  // insert icons to popup window
+  const insertPopupIcons = () => {
+    const [newWindowIconImg, gitHubIconImg] = Array.from(document.querySelectorAll('.popup-btn > a > img'));
+    newWindowIconImg.src = newWindowIcon;
+    gitHubIconImg.src = gitHubIcon;
+  };
+
+  // Add event listener to project btns
+  const cardBtnArr = Array.from(document.querySelectorAll('.btn-card'));
   cardBtnArr.forEach((btn) => {
     btn.addEventListener('click', (e) => {
       // Filter the project by id
-      const project = projects.filter(
+      const [project] = projects.filter(
         (proj) => proj.id === e.target.parentElement.id,
       );
-      DOM.workSection.appendChild(DOM.createPopupWindow(project[0]));
-      //  Lister for click on close icon in popup container
+      const workSection = document.getElementById('recent-works');
+      workSection.appendChild(DOM.createPopupWindow(project));
+      insertPopupIcons();
+      //  Listen for click on close icon in popup container
       DOM.createCloseIcon(document.querySelector('.popup-container'), 'span');
       const popupCloseIcon = document.querySelector('span.close-icon-wrapper');
       popupCloseIcon.addEventListener('click', () => {
@@ -114,8 +127,8 @@ const executeEvent = () => {
 
   const firstCardButton = document.querySelector('.btn-feature');
   firstCardButton.addEventListener('click', () => {
-    DOM.workSection.appendChild(DOM.createPopupWindow(projects2[0]));
-    //  Lister for click on close icon in popup container
+    DOM.workSection.appendChild(DOM.createPopupWindow(featuredProjects[0]));
+    //  Listen for click on close icon in popup container
     DOM.createCloseIcon(document.querySelector('.popup-container'), 'span');
     const popupCloseIcon = document.querySelector('span.close-icon-wrapper');
     popupCloseIcon.addEventListener('click', () => {
@@ -135,4 +148,7 @@ const executeEvent = () => {
   });
 };
 
-executeEvent();
+displayProjects(projects);
+displayImages();
+formValidation();
+executeEvents();

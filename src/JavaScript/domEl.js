@@ -21,13 +21,17 @@ const DOM = (() => {
   };
 
   // Projects card display function
-  const cardContainer = document.getElementById('card-container');
+  const cardContainer = document.querySelector('.project-card-container');
 
   const createProjectCard = ({
-    name, description, images, technologies, id,
+    name,
+    description,
+    images,
+    technologies,
+    id,
   }) => {
     const listItem = createElement('li', 'project-card');
-    listItem.style.background = images.mobile;
+    listItem.style.backgroundImage = `url(${images.mobile})`;
     listItem.id = id;
 
     const projectName = createElement('h3');
@@ -48,36 +52,12 @@ const DOM = (() => {
     const cardDescription = createElement('div', 'card-description');
     cardDescription.append(projectName, projectDescription, techUL);
 
-    const projectBtn = createElement('button', 'btn-card');
-    projectBtn.classList.add('btn');
+    const projectBtn = createElement('button', 'btn');
+    projectBtn.classList.add('btn-card');
     projectBtn.type = 'button';
     projectBtn.textContent = 'See Project';
     listItem.append(cardDescription, projectBtn);
     return listItem;
-  };
-
-  const insertFirstCard = ({
-    name, description, images, technologies,
-  }) => {
-    const firstCardEl = `
-        <div class="featured">
-              <div class="first-card-image-container">
-                <img class="first-card-img-mobile" src=${images.mobile} alt="project image" />
-                <img class="first-card-img-desktop" src=${images.desktop} alt="project image" />
-              </div>
-              <div class="first-card" id="7">
-                <h3>${name}</h3>
-                <p>
-                  ${description}
-                </p>
-                <ul>
-                ${technologies.map((tech) => `<li  class="tags">${tech}</li>`)}                  
-                </ul>
-                <button type="button" class="btn btn-feature">See Project</button>
-              </div>
-            </div>`;
-    const myWork = document.querySelector('.my-works');
-    myWork.insertAdjacentHTML('afterbegin', firstCardEl);
   };
 
   // Project card display map
@@ -87,7 +67,12 @@ const DOM = (() => {
 
   // Project pop up window create function
   const createPopupWindow = ({
-    name, description, images, technologies, liveLink, sourceFile,
+    name,
+    description,
+    images,
+    technologies,
+    liveLink,
+    sourceFile,
   }) => {
     const projectModal = createElement('div', 'project-modal');
     const popupContainer = createElement('div', 'popup-container');
@@ -105,12 +90,12 @@ const DOM = (() => {
                       <div class="pop-btn-wrap">
                         <button class="btn popup-btn" type="button">
                             <a href="${liveLink}">See Live
-                            <img src="./icons/new-window-icon.svg" alt="New window icon">
+                            <img src="" alt="New window icon">
                             </a>                        
                         </button>
                         <button class="btn popup-btn" type="button">
                             <a href="${sourceFile}">See Source
-                            <img src="./icons/github-icon.svg" alt="github icon">
+                            <img src="" alt="github icon">
                             </a>                        
                         </button>
                       </div>
@@ -125,18 +110,20 @@ const DOM = (() => {
   const hamburgerBtn = document.querySelector('.hamburger-btn'); // Hamburger
   const navLinksWrapper = document.getElementById('nav-links'); // Menu link wrapper
   const projectBtns = document.querySelectorAll('.btn-card'); // See project btns
+  const projectInnerCards = document.querySelectorAll('.card-description'); // See project cards
   const workSection = document.getElementById('recent-works'); // portfolio Work section
 
   return {
     createElement,
     createCloseIcon,
     createPopupWindow,
-    insertFirstCard,
+    createProjectCard,
     displayProjects,
     hamburgerBtn,
     navLinksWrapper,
     cardContainer,
     projectBtns,
+    projectInnerCards,
     workSection,
   };
 })();
