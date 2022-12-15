@@ -5,7 +5,7 @@
 ## Demo Link
 > Below is the link to view the portfolio online
 
-> [My Portfolio](https://bobb-rob.github.io/portfolio-project-1/)
+> [My Portfolio](https://robertsonakpan.netlify.app/)
 
 ## Built With:
 
