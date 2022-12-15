@@ -39,7 +39,6 @@
 .featured {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 5%;
   border: 1px solid #dddcd9;
   border-radius: 10px;
